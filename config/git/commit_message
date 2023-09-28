@@ -1,0 +1,21 @@
+
+# vi:ft=gitcommit:tw=72:sw=2:ts=2:expandtab:spell
+#
+# 50-character subject line
+# * type: build, chore, ci, docs, feat, fix
+#         perf, refactor, revert, style, test
+# * scope: depends on repository
+# * description: imperative, this commit will...
+#
+# 72-character wrapped longer description (body)
+# * why is this change needed?
+# * how does it address the issue?
+# * provide links to relevant tickets, articles, or resources
+#
+# necessary references on footer
+# * BREAKING CHANGE: or appends a ! after the type/scope
+# * other footer: follow git-trailer format (`token: value`)
+#   * Refs, Fixes, Source-link, Change-id, Co-Authored-By
+#   * Reviewed-On, Reviewed-By
+#
+# see https://blog.avm-martin.my.id/2023/06/commits-v1-tldr.html
