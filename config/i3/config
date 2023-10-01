@@ -1,0 +1,6 @@
+# i3 config file (v4)
+# initial config via `i3-config-wizard`
+# please see https://i3wm.org/docs/userguide.html for a complete reference
+
+
+include config.conf
