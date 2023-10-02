@@ -6,6 +6,9 @@
 	autocrlf = false
 	editor = nvim
 
+[url "github.avm-martin.my.id:"]
+	insteadOf = https://github.com/AVM-Martin/
+
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 
