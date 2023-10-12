@@ -6,7 +6,7 @@
 	st = status
 	lg = log --max-count 25 --oneline --reverse
 	pu = !"f() { git push --set-upstream \"${1:-origin}\" $(git curr); }; f"
-	gl = config --global --list
+	gl = config --global --list --includes
 	cp = cherry-pick
 
 	wip = commit -m "WIP"
