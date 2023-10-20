@@ -15,10 +15,17 @@ function myuserhost() {
   echo "%B%{$fg[green]%}%n@%m%b$(mybasecolor)"
 }
 
+function myvenv(){
+  # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/virtualenv/virtualenv.plugin.zsh
+  [[ -n ${VIRTUAL_ENV} ]] || return
+  echo " %B%{$fg[yellow]%}(${VIRTUAL_ENV:t:gs/%/%%})%b$(mybasecolor)"
+}
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 function mypath() {
   # use dots to shorten path
   # https://unix.stackexchange.com/a/273567
-  echo "%B%{$fg[red]%}%(5~|%-1~/.../%3~|%4~)%b$(mybasecolor)"
+  echo " %B%{$fg[red]%}%(5~|%-1~/.../%3~|%4~)%b$(mybasecolor)"
 }
 
 function mygit() {
@@ -27,7 +34,7 @@ function mygit() {
     || return
 
   local git_dirty="%{$fg[red]%}$(parse_git_dirty)%{$fg[yellow]%}"
-  echo "%B%{$fg[yellow]%}($(git_prompt_short_sha) ${ref#refs/heads/}${git_dirty})%b$(mybasecolor)"
+  echo " %B%{$fg[yellow]%}($(git_prompt_short_sha) ${ref#refs/heads/}${git_dirty})%b$(mybasecolor)"
 }
 
 function mytime() {
@@ -39,7 +46,7 @@ function myretcode() {
 }
 
 
-PROMPT=$'$(mybasecolor)┌─[$(myuserhost)] $(mypath) $(mygit)
+PROMPT=$'$(mybasecolor)┌─[$(myuserhost)]$(myvenv)$(mypath)$(mygit)
 └─[$(mytime) $(myretcode)]%b%{$reset_color%} $ '
 
 PS2=$' \e[0;34m%}%B>%{\e[0m%}%b '
