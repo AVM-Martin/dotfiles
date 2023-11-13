@@ -29,12 +29,17 @@ function mypath() {
 }
 
 function mygit() {
+  local ref
   ref=$(command git symbolic-ref HEAD 2> /dev/null) \
     || ref=$(command git rev-parse --short HEAD 2> /dev/null) \
     || return
 
+  local short_sha
+  short_sha=$(command git rev-parse --short HEAD 2> /dev/null) \
+    || short_sha="-"
+
   local git_dirty="%{$fg[red]%}$(parse_git_dirty)%{$fg[yellow]%}"
-  echo " %B%{$fg[yellow]%}($(git_prompt_short_sha) ${ref#refs/heads/}${git_dirty})%b$(mybasecolor)"
+  echo " %B%{$fg[yellow]%}(${short_sha} ${ref#refs/heads/}${git_dirty})%b$(mybasecolor)"
 }
 
 function mytime() {
