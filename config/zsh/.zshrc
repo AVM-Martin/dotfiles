@@ -12,6 +12,10 @@ ZSH_THEME="rkj-repos"
 zstyle ':omz:update' mode disabled  # auto reminder
 # zstyle ':omz:update' frequency 13 # in days
 
+# https://github.com/ohmyzsh/ohmyzsh#skip-aliases
+zstyle ':omz:*' aliases no
+zstyle ':omz:lib:history' aliases yes
+
 CASE_SENSITIVE="true"
 HYPHEN_INSENSITIVE="false"
 DISABLE_MAGIC_FUNCTIONS="true"

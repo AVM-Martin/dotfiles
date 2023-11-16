@@ -1,12 +1,12 @@
 # PROMPT='%F{green}%n%f@%F{green}%*%f:%F{yellow}%~%f$ '
 
 alias ls='ls --color=auto -G'
-alias grep='grep --color=auto'
-alias fgrep='grep -F'
-alias egrep='grep -E'
+alias ll='ls --color=auto -G -l'
+alias la='ls --color=auto -G -la'
 
-alias ll='ls -l'
-alias la='ls -la'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+alias fgrep='grep -F --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+alias egrep='grep -E --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 
 # https://github.com/novas0x2a/config-files/blob/master/.zshenv#L28
 export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history"
