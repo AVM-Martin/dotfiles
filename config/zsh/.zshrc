@@ -22,7 +22,7 @@ COMPLETION_WAITING_DOTS="false"
 DISABLE_UNTRACKED_FILES_DIRTY="false" # enable for large repositories
 HIST_STAMPS="%Y-%m-%dT%H:%M:%S%z"
 
-plugins=()
+plugins=(gnu-utils)
 
 
 # decluttered "$XDG_CONFIG_HOME/zsh"

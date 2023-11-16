@@ -2,8 +2,8 @@
 
 alias ls='ls --color=auto -G'
 alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias fgrep='grep -F'
+alias egrep='grep -E'
 
 alias ll='ls -l'
 alias la='ls -la'
