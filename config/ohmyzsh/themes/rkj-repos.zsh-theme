@@ -31,7 +31,8 @@ function mypath() {
 function mygit() {
   local ref
   ref=$(command git symbolic-ref HEAD 2> /dev/null) \
-    || ref=$(command git rev-parse --short HEAD 2> /dev/null) \
+    || ref="tag:$(command git describe --tags --exact-match HEAD 2> /dev/null)" \
+    || ref=$(command git rev-parse --short HEAD > /dev/null 2>&1) \
     || return
 
   local short_sha
