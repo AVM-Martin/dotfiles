@@ -1,0 +1,8 @@
+[url "github.avm-martin.my.id:AVM-Martin/"]
+	insteadOf = https://github.com/AVM-Martin/
+
+[url "github.avm-martin.my.id:sui-system/"]
+	insteadOf = https://github.com/sui-system/
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/

@@ -6,12 +6,6 @@
 	autocrlf = false
 	editor = nvim
 
-[url "github.avm-martin.my.id:"]
-	insteadOf = https://github.com/AVM-Martin/
-
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-
 [init]
 	defaultBranch = main
 
@@ -35,6 +29,7 @@
 
 [include]
 	path = config_user
+	path = config_url
 	path = config_alias
 
 [includeIf "gitdir:~/Documents/"]
