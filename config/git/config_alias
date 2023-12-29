@@ -5,7 +5,7 @@
 	dc = diff --cached
 	st = status
 	lg = log --max-count 25 --oneline --reverse
-	pu = !"f() { git push --set-upstream \"${1:-origin}\" $(git curr); }; f"
+	pu = !"f() { git push --set-upstream \"${1:-origin}\" $(git rev-parse --abbrev-ref HEAD); }; f"
 	gl = config --global --list --includes
 	cp = cherry-pick
 
@@ -20,3 +20,5 @@
 
 	deploy-log-format = log --oneline --reverse --pretty=tformat:'-----"%h"-----"%an"-----"%s"'
 	deploy-log = !"f() { git deploy-log-format \"${1:-origin/main}\"..\"${2:-origin/develop}\" | sed -r 's/^.*\\((#[0-9]*)\\)/"\\1"&/g;s/-----/\t/g'; }; f"
+
+	aliases = config --get-regexp '^alias\\.'

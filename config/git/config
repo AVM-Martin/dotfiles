@@ -28,6 +28,7 @@
 	autoStash = true
 
 [pager]
+	aliases = false
 	branch = false
 	last = false
 	lg = false
