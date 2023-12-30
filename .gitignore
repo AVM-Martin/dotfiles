@@ -1,7 +1,7 @@
 # ignore zsh
-config/zsh/.zsh_sessions
-config/zsh/*.local
+.config/zsh/.zsh_sessions
+.config/zsh/*.local
 
 # ignore tmux plugins
-config/tmux/plugins
-!config/tmux/plugins/tpm
+.config/tmux/plugins
+!.config/tmux/plugins/tpm
