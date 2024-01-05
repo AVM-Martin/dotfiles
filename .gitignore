@@ -5,3 +5,6 @@
 # ignore tmux plugins
 .config/tmux/plugins
 !.config/tmux/plugins/tpm
+
+# ignore yadm directory
+.local/share/yadm/repo.git
