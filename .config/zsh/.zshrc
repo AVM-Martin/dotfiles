@@ -4,7 +4,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.local/lib/ohmyzsh"
 ZSH_CUSTOM="$HOME/.config/ohmyzsh"
 
 ZSH_THEME="rkj-repos"
