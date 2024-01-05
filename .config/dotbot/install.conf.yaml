@@ -1,0 +1,13 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      glob: true
+
+- link:
+    ~/.zshenv: .zshenv
+    ~/.config/: .config/*
+    ~/.local/lib: .local/lib/*
+    ~/.local/share:
+      path: .local/share/*
+      exclude: [ ".local/share/dotfiles" ]
