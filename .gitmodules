@@ -1,6 +1,10 @@
 [submodule ".config/tmux/plugins/tpm"]
 	path = .config/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+	ignore = dirty
+	shallow = true
 [submodule ".local/share/nvim/plugged/vim-plug"]
 	path = .local/share/nvim/plugged/vim-plug
 	url = https://github.com/junegunn/vim-plug
+	ignore = dirty
+	shallow = true
