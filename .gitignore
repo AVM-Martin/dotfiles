@@ -1,10 +1,12 @@
+# ignore local config files, but not config directory
+*.local
+!*.local/
+
 # ignore zsh
 .config/zsh/.zsh_sessions
-.config/zsh/*.local
 
 # ignore tmux plugins
 .config/tmux/plugins
-!.config/tmux/plugins/tpm
 
 # ignore yadm directory
 .local/share/yadm/repo.git
