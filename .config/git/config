@@ -46,6 +46,7 @@
 	lg = false
 
 [alias]
+	ap = add --patch
 	co = checkout
 	cb = checkout -b
 	ci = commit
