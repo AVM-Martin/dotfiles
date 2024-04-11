@@ -1,0 +1,37 @@
+#!/bin/bash -e
+#
+# A wrapper of some self-made custom commands.
+
+NAME="$(basename "$0")"
+PREFIX="\033[1;96m${NAME}\033[0m"
+readonly NAME PREFIX
+
+readonly VERSION="0.1.0"
+
+readonly subcommand="${1:-help}"
+set -- "${@:2}"
+
+case "${subcommand}" in
+  -h|--help|help)
+    echo -e "${PREFIX}: a wrapper of some self-made custom commands."
+    echo -e ""
+    echo -e "You can add your own commands by adding 'avm-<command-name>' executables into '\$PATH'."
+    echo -e "This wrapper is inspired from git custom subcommands."
+    echo -e ""
+    echo -e "Arguments:"
+    echo -e "  -h, --help, help       : show this simple help"
+    echo -e "  -v, --version, version : show this script version"
+    exit 0
+    ;;
+  -v|--version|version)
+    echo -e "${PREFIX}: ${VERSION}"
+    exit 0
+    ;;
+esac
+
+if ! type -p "${NAME}-${subcommand}" > "/dev/null" 2>&1; then
+  echo -e "${PREFIX}: command '${NAME}-${subcommand}' is not found"
+  exit 127
+fi
+
+command "${NAME}-${subcommand}" "$@"
