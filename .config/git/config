@@ -3,8 +3,8 @@
 	email = avmm.martin+github@gmail.com
 	signingkey = 566629832395B5EC74C74E0C25F846A221B3F159
 
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+[url "github.miko.local:"]
+	insteadOf = github:
 
 [include]
 	path = config.local
