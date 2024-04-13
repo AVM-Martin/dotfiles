@@ -18,6 +18,13 @@
 	excludesFile = ~/.config/git/ignore
 	attributesFile = ~/.config/git/attributes
 
+[status]
+	relativePaths = true
+	showStash = true
+
+[log]
+	date = iso8601-strict
+
 [init]
 	defaultBranch = main
 
@@ -30,6 +37,11 @@
 
 [push]
 	default = simple
+	followTags = true
+
+[fetch]
+	prune = true
+	pruneTags = true
 
 [pull]
 	rebase = true
@@ -46,10 +58,10 @@
 [alias]
 	ap = add --patch
 	cb = checkout -b
-	ci = commit
 	co = checkout
 	cp = cherry-pick
 	dc = diff --cached
+	dh = diff HEAD^ HEAD
 	gl = config --global --list --includes
 	lg = log --max-count 25 --oneline --reverse
 	pu = !"f() { git push --set-upstream \"${1:-origin}\" $(git rev-parse --abbrev-ref HEAD); }; f"
