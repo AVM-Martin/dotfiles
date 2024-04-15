@@ -1,0 +1,25 @@
+#!/bin/bash -e
+#
+# Delete current branch and switch to given branch.
+
+NAME="$(basename "$0")"
+PREFIX="\033[1;96m${NAME}\033[0m"
+readonly NAME PREFIX
+
+readonly branch_checkout="${1}"
+
+if [[ -z "${branch_checkout}" ]]; then
+  echo -e "${PREFIX}: checkout branch name required"
+  exit 1
+fi
+
+branch_delete=$(git branch --show-current)
+readonly branch_delete
+
+if [[ -z "${branch_delete}" ]]; then
+  echo -e "${PREFIX}: 'HEAD' has not associated with any branch"
+  exit 1
+fi
+
+git checkout --quiet "${branch_checkout}"
+git branch -D "${branch_delete}"
