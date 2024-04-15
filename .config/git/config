@@ -6,9 +6,6 @@
 [url "github.miko.local:"]
 	insteadOf = github:
 
-[include]
-	path = config.local
-
 [color]
 	ui = auto
 
@@ -77,3 +74,6 @@
 	unstage = restore --staged
 
 	aliases = config --get-regexp '^alias\\.'
+
+[include]
+	path = config.local
