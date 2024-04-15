@@ -18,7 +18,7 @@ case "${subcommand}" in
     echo -e "You can add your own commands by adding 'avm-<command-name>' executables into '\$PATH'."
     echo -e "This wrapper is inspired from git custom subcommands."
     echo -e ""
-    echo -e "Arguments:"
+    echo -e "Options:"
     echo -e "  -h, --help, help       : show this simple help"
     echo -e "  -v, --version, version : show this script version"
     exit 0

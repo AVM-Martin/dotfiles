@@ -1,7 +1,7 @@
 #!/bin/bash -e
 #
-# Delete gone branches from a local repository
-# Inspired from [1] with modifications
+# Delete gone branches from a local repository.
+# Inspired from [1] with modifications.
 #
 # [1]: https://www.erikschierboom.com/2020/02/17/cleaning-up-local-git-branches-deleted-on-a-remote/
 
