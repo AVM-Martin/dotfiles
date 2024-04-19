@@ -17,7 +17,7 @@
 
 [status]
 	relativePaths = true
-	showStash = true
+	showStash = false
 
 [log]
 	date = iso8601-strict
@@ -62,7 +62,7 @@
 	gl = config --global --list --includes
 	lg = log --max-count 25 --oneline --reverse
 	pu = !"f() { git push --set-upstream \"${1:-origin}\" $(git rev-parse --abbrev-ref HEAD); }; f"
-	st = status
+	st = status --show-stash
 
 	wip = commit -m "WIP"
 
