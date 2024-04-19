@@ -61,13 +61,13 @@
 	dh = diff HEAD^ HEAD
 	gl = config --global --list --includes
 	lg = log --max-count 25 --oneline --reverse
-	pu = !"f() { git push --set-upstream \"${1:-origin}\" $(git rev-parse --abbrev-ref HEAD); }; f"
+	pu = !"git push --set-upstream \"${1:-origin}\" \"${2:-$(git branch --show-current)}\" && :"
 	st = status --show-stash
 
 	wip = commit -m "WIP"
 
 	cina = commit --no-edit --amend
-	curr = rev-parse --abbrev-ref HEAD
+	curr = branch --show-current
 	last = log --max-count 1 --pretty=fuller
 	root = rev-parse --show-toplevel
 
