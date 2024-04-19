@@ -54,6 +54,8 @@
 
 [alias]
 	ap = add --patch
+	br = branch --sort committerdate -vv
+	bd = branch --delete
 	cb = checkout -b
 	co = checkout
 	cp = cherry-pick
