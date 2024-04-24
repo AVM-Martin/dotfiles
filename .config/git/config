@@ -15,6 +15,9 @@
 	excludesFile = ~/.config/git/ignore
 	attributesFile = ~/.config/git/attributes
 
+[advice]
+	addEmptyPathspec = false
+
 [status]
 	relativePaths = true
 	showStash = false
