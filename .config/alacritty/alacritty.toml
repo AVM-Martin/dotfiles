@@ -1,0 +1,48 @@
+import = [
+  "~/.config/alacritty/theme.toml",
+  "~/.config/alacritty/config.local",
+]
+
+live_config_reload = true
+#ipc_socket = true # Offer IPC using `alacritty msg` (unix only)
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding = { x = 5, y = 1 }
+decorations = "none"
+dynamic_padding = true
+dynamic_title = false
+option_as_alt = "OnlyLeft"
+startup_mode = "Maximized"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+#[bell]
+
+#[selection]
+
+[cursor]
+thickness = 0.15
+unfocused_hollow = true
+vi_mode_style = "None"
+
+[cursor.style]
+blinking = "Off"
+shape = "Block"
+
+#[terminal]
+
+#[mouse]
+
+#[hints]
+
+#[keyboard]
+
+[debug]
+# Display the time it takes to redraw each frame.
+#render_time = false
+log_level = "Warn"

@@ -1,0 +1,70 @@
+[window]
+opacity = 0.95
+
+[font]
+size = 11.5
+offset = { x = 1, y = 2 }
+
+#[font.normal]
+#family = "monospace" # monospace Consolas Menlo
+#style = "Regular"
+
+#[font.bold]
+#family = "monospace"
+#style = "Bold"
+
+#[font.italic]
+#family = "monospace"
+#style = "Italic"
+
+#[font.bold_italic]
+#family = "monospace"
+#style = "Bold Italic"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = "0x171717"
+foreground = "0xffffff"
+
+[colors.selection]
+background = "0x314f78"
+text = "CellForeground"
+
+#[colors.cursor]
+#[colors.vi_mode_cursor]
+#[colors.search]
+#[colors.hints]
+#[colors.line_indicator]
+#[colors.footer_bar]
+
+[colors.normal]
+black   = "0x000000"
+red     = "0x990000"
+green   = "0x00a600"
+yellow  = "0x999900"
+blue    = "0x0000b2"
+magenta = "0xb200b2"
+cyan    = "0x00a6b2"
+white   = "0xbfbfbf"
+
+[colors.bright]
+black   = "0x666666"
+red     = "0xe50000"
+green   = "0x00d900"
+yellow  = "0xe5e500"
+blue    = "0x0000ff"
+magenta = "0xe500e5"
+cyan    = "0x00e5e5"
+white   = "0xe5e5e5"
+
+#[colors.dim]
+#black   = "0x131415"
+#red     = "0x864343"
+#green   = "0x777c44"
+#yellow  = "0x9e824c"
+#blue    = "0x556a7d"
+#magenta = "0x75617b"
+#cyan    = "0x5b7d78"
+#white   = "0x828482"
