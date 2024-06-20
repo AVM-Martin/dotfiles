@@ -1,20 +1,22 @@
 # global ignore files in home directories
 .DS_Store
 
-# ignore linux and macos known directories and files
-/.Trash/
-/Applications/
+# ignore user-dirs
 /Desktop/
 /Documents/
 /Downloads/
-/Library/
-/Movies/
 /Music/
 /Pictures/
 /Public/
-/snap/
 /Templates/
 /Videos/
+
+# ignore linux and macos known directories and files
+/.Trash/
+/Applications/
+/Library/
+/Movies/
+/snap/
 
 /.CFUserTextEncoding
 /.sudo_as_admin_successful
