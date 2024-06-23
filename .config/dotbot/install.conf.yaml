@@ -7,6 +7,7 @@
 - link:
     ~/.zshenv: .zshenv
     ~/.config/: .config/*
+    ~/.local/bin: .local/bin/*
     ~/.local/lib: .local/lib/*
     ~/.local/share:
       path: .local/share/*
