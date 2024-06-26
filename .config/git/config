@@ -34,6 +34,10 @@
 
 [tag]
 	gpgSign = true
+	sort = -version:refname
+
+[versionsort]
+	suffix = -
 
 [push]
 	default = simple
