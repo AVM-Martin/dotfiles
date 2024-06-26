@@ -13,6 +13,8 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " TODO: Load plugins here (pathogen or vundle)
 call plug#begin()
+  Plug 'junegunn/vim-plug'
+
   Plug 'preservim/nerdcommenter'
   Plug 'preservim/nerdtree'
 
@@ -20,6 +22,10 @@ call plug#begin()
   Plug 'editorconfig/editorconfig-vim'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
+
+" The caveat is that you should *never* use PlugUpgrade, and you'll have to restart Vim after vim-plug is updated
+" See https://github.com/junegunn/vim-plug/wiki/faq#shouldnt-vim-plug-update-itself-on-plugupdate-like-vundle
+delc PlugUpgrade
 
 " Turn on syntax highlighting
 syntax on
