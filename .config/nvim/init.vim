@@ -5,6 +5,12 @@ set noswapfile
 " Helps force plugins to load correctly when it is turned back on below
 " filetype off
 
+" Automatically run PlugInstall if there are missing plugins
+" See https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation-of-missing-plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+\|   PlugInstall --sync | source $MYVIMRC
+\| endif
+
 " TODO: Load plugins here (pathogen or vundle)
 call plug#begin()
   Plug 'preservim/nerdcommenter'
