@@ -1,6 +1,7 @@
-#!/usr/bin/env bash
-
-set -e
+#!/bin/bash -e
+#
+# Bootstrap script for dotbot. Snatched with modification on variable value.
+# Refs: https://github.com/anishathalye/dotbot/blob/840cd164d20713a8e34f3aeb4ab1121c9745fad9/tools/git-submodule/install
 
 CONFIG=".config/dotbot/install.conf.yaml"
 DOTBOT_DIR=".local/lib/dotbot"

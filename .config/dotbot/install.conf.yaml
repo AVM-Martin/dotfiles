@@ -12,3 +12,9 @@
     ~/.local/share:
       path: .local/share/*
       exclude: [ ".local/share/dotfiles" ]
+
+- shell:
+  - description: Run bootstrap scripts, managed by yadm
+    command: $HOME/.local/lib/yadm/yadm bootstrap
+    stdout: true
+    stderr: true
