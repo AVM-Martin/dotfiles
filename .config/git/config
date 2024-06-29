@@ -67,22 +67,20 @@
 	co = checkout
 	cp = cherry-pick
 	dc = diff --cached
-	dh = diff HEAD^ HEAD
 	gl = config --global --list --includes
 	lg = log --max-count 25 --oneline --reverse
 	pu = !"git push --set-upstream \"${1:-origin}\" \"${2:-$(git branch --show-current)}\" && :"
 	st = status --show-stash
 
-	wip = commit -m "WIP"
+	wip = commit --message="WIP"
 
 	cina = commit --no-edit --amend
 	curr = branch --show-current
 	last = log --max-count 1 --pretty=fuller
 	root = rev-parse --show-toplevel
 
-	unstage = restore --staged
-
 	aliases = config --get-regexp '^alias\\.'
+	unstage = restore --staged
 
 [include]
 	path = config.local
