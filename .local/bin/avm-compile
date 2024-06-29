@@ -1,0 +1,64 @@
+#!/bin/bash -e
+#
+# Compile-and-run or interpret standalone source code.
+# Source code will be executed with pre-defined flags/args.
+#
+# Arguments:
+#   filename (default: "solution.cpp")
+
+NAME="$(basename "$0")"
+PREFIX="\033[1;96m${NAME}\033[0m"
+readonly NAME PREFIX
+
+readonly filename="${1:-solution.cpp}"
+readonly fileobj="${filename%.*}"
+readonly lang="${filename##*.}"
+
+declare compile
+declare execute
+
+case "${lang}" in
+  c)
+    compile="gcc -lm -o ${fileobj} ${filename}"
+    execute="./${fileobj}"
+    ;;
+  cpp)
+    compile="g++ -std=c++17 -lm -o ${fileobj} ${filename}"
+    execute="./${fileobj}"
+    ;;
+  java)
+    compile="javac ${filename}"
+    execute="java -enableassertions ${fileobj}"
+    ;;
+  kt)
+    compile="kotlinc ${filename} -include-runtime -d ${fileobj}.jar"
+    execute="java -jar ${fileobj}.jar"
+    ;;
+  py|py3)
+    execute="python3 ${filename}"
+    ;;
+  go)
+    execute="go run ${filename}"
+    ;;
+  *)
+    echo -e "${PREFIX}: unrecognized programming language"
+    exit 1
+    ;;
+esac
+
+readonly compile
+readonly execute
+
+# compile if needed
+if [[ -n "${compile}" ]]; then
+  echo -e "${PREFIX}: Compiling '${filename}'"
+  ${compile}
+  echo -e "${PREFIX}: '${fileobj}' successfully compiled"
+fi
+
+# run
+echo -e "${PREFIX}: Running '${filename}':"
+echo -e "================================================================"
+${execute}
+echo -e ""
+echo -e "================================================================"
