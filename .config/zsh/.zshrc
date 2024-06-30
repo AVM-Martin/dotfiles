@@ -1,3 +1,5 @@
+# shellcheck disable=SC2154
+
 # Default prompt
 # PS1="%n@%m %1~ %# "
 
@@ -5,18 +7,18 @@
 export PATH="${HOME}/bin:${HOME}/.local/bin:${PATH}"
 
 export ZSH="${HOME}/.local/lib/ohmyzsh"
-ZSH_CUSTOM="${XDG_CONFIG_HOME}/ohmyzsh"
+export ZSH_CUSTOM="${XDG_CONFIG_HOME}/ohmyzsh"
 
-ZSH_THEME="rkj-repos"
-CASE_SENSITIVE="true"
-HYPHEN_INSENSITIVE="false"
-DISABLE_MAGIC_FUNCTIONS="true"
-DISABLE_LS_COLORS="false"
-DISABLE_AUTO_TITLE="true"
-ENABLE_CORRECTION="false"
-COMPLETION_WAITING_DOTS="false"
-DISABLE_UNTRACKED_FILES_DIRTY="false" # enable for large repositories
-HIST_STAMPS="%Y-%m-%dT%H:%M:%S%z"
+export ZSH_THEME="rkj-repos"
+export CASE_SENSITIVE="true"
+export HYPHEN_INSENSITIVE="false"
+export DISABLE_MAGIC_FUNCTIONS="true"
+export DISABLE_LS_COLORS="false"
+export DISABLE_AUTO_TITLE="true"
+export ENABLE_CORRECTION="false"
+export COMPLETION_WAITING_DOTS="false"
+export DISABLE_UNTRACKED_FILES_DIRTY="false" # enable for large repositories
+export HIST_STAMPS="%Y-%m-%dT%H:%M:%S%z"
 
 zstyle ':omz:update' mode disabled
 
@@ -24,7 +26,7 @@ zstyle ':omz:update' mode disabled
 zstyle ':omz:*' aliases no
 zstyle ':omz:lib:history' aliases yes
 
-plugins=(gnu-utils)
+export plugins=(gnu-utils)
 
 
 # decluttered "$XDG_CONFIG_HOME/zsh"
@@ -32,8 +34,8 @@ autoload -U compinit
 compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump-${ZSH_VERSION}"
 zstyle ':completion:*' cache-path "${XDG_CACHE_HOME}/zsh/zcompcache"
 
-ZSH_CACHE_DIR="${XDG_CACHE_HOME}/ohmyzsh"
-ZSH_COMPDUMP="${ZSH_CACHE_DIR}/zcompdump-${ZSH_VERSION}"
+export ZSH_CACHE_DIR="${XDG_CACHE_HOME}/ohmyzsh"
+export ZSH_COMPDUMP="${ZSH_CACHE_DIR}/zcompdump-${ZSH_VERSION}"
 
 # https://github.com/novas0x2a/config-files/blob/master/.zshenv#L28
 export HISTFILE="${XDG_STATE_HOME}/zsh/history"
@@ -41,7 +43,7 @@ export HISTSIZE=50000
 export SAVEHIST=50000
 export HISTORY_IGNORE="(cd|clear|exit|htop|less|la|ls|man|pwd)(| *)"
 
-source $ZSH/oh-my-zsh.sh
+source "${ZSH}/oh-my-zsh.sh"
 
 # User configuration
 
@@ -66,4 +68,5 @@ alias egrep='grep -E --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.t
 
 alias diffs="diff --color=always --ignore-trailing-space --strip-trailing-cr"
 
-[[ -f "$ZDOTDIR/zshrc.local" ]] && . $ZDOTDIR/zshrc.local || true
+# shellcheck disable=SC2015
+test -f "${ZDOTDIR}/zshrc.local" && . "${ZDOTDIR}/zshrc.local" || true

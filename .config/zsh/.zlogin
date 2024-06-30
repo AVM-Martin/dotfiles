@@ -1,3 +1,4 @@
-# PROMPT='%F{green}%n%f@%F{green}%*%f:%F{yellow}%~%f$ '
+# shellcheck disable=SC2154
 
-[[ -f "$ZDOTDIR/zlogin.local" ]] && . $ZDOTDIR/zlogin.local || true
+# shellcheck disable=SC2015
+test -f "${ZDOTDIR}/zlogin.local" && . "${ZDOTDIR}/zlogin.local" || true
