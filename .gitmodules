@@ -23,3 +23,4 @@
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
 	shallow = true
+	update = none
