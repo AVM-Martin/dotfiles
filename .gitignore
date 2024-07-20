@@ -1,0 +1,11 @@
+# vm-tmp specific
+.cache/
+.local/state/
+.local/share/gnupg
+.local/share/minikube
+.local/share/nvim/
+.local/share/tmux/
+.ssh/
+
+.bash_history
+.sudo_as_admin_successful
