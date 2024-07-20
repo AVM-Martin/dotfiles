@@ -18,6 +18,7 @@
 	url = https://github.com/TheLocehiliosan/yadm
 	ignore = dirty
 	shallow = true
+	update = none
 [submodule ".local/lib/dotbot"]
 	path = .local/lib/dotbot
 	url = https://github.com/anishathalye/dotbot
