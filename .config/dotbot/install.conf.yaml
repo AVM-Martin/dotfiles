@@ -14,10 +14,7 @@
       exclude: [ ".local/share/dotfiles" ]
 
 - shell:
-  - description: Update yadm submodules
-    command: git submodule update --init --recursive --checkout ".local/lib/yadm"
-
   - description: Run bootstrap scripts, managed by yadm
-    command: $HOME/.local/lib/yadm/yadm bootstrap
+    command: "$HOME/.config/yadm/bootstrap"
     stdout: true
     stderr: true
