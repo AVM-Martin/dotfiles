@@ -29,10 +29,9 @@ Repo: https://github.com/TheLocehiliosan/yadm
 
 ```bash
 cd $HOME
-tempfile=$(mktemp) && curl -fLo $tempfile https://github.com/TheLocehiliosan/yadm/raw/master/yadm && chmod u+x $tempfile
+tempfile=$(mktemp) && curl -fLo $tempfile https://github.com/TheLocehiliosan/yadm/raw/3.2.2/yadm && chmod u+x $tempfile
 $tempfile clone --no-bootstrap https://github.com/AVM-Martin/dotfiles
 $tempfile submodule update --init --checkout .local/lib/yadm
-$tempfile submodule update --init
 $tempfile bootstrap
 rm -rf $tempfile
 ```
