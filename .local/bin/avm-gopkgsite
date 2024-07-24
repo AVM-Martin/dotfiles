@@ -1,0 +1,46 @@
+#!/bin/bash -e
+#
+# Run golang's pkgsite in local.
+#
+# Arguments:
+#   -p | --port (default: 8080)
+
+NAME="$(basename "$0")"
+PREFIX="\033[1;96m${NAME}\033[0m"
+readonly NAME PREFIX
+
+if ! type -p "pkgsite" > "/dev/null" 2>&1; then
+  echo -e "${PREFIX}: command 'pkgsite' is not found"
+  exit 127
+fi
+
+POSITIONAL_ARGS=()
+port="8080"
+
+while (( $# > 0 )); do
+  case "$1" in
+    -h|--help)
+      echo -e "${PREFIX}: run golang's pkgsite in local."
+      echo -e ""
+      echo -e "Options:"
+      echo -e "  -p, --port: set port (default: 8080)"
+      echo -e "  -h, --help: show this simple help"
+      exit 0
+      ;;
+    -p|--port)
+      shift
+      port=$1
+      shift
+      ;;
+    *)
+      POSITIONAL_ARGS+=("$1")
+      shift
+      ;;
+  esac
+done
+
+set -- "${POSITIONAL_ARGS[@]}"
+
+# shellcheck disable=SC2154
+cd "${GOPATH}/src" || exit 1
+pkgsite -http "0.0.0.0:${port}" "$@"
