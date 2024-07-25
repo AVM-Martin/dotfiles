@@ -1,6 +1,6 @@
 #!/bin/bash -e
 #
-# Bootstrap: setup yadm's dependencies
+# Bootstrap: setup yadm's dependencies.
 
 NAME="$(basename "$0")"
 PREFIX="\033[1;96m${NAME}\033[0m"
@@ -13,3 +13,7 @@ fi
 
 # clone submodules
 "${HOME}/.local/lib/yadm/yadm" submodule update --init
+
+# symlink
+mkdir -p "${HOME}/bin"
+ln -sf "${HOME}/.local/lib/yadm/yadm" "${HOME}/bin"
