@@ -27,6 +27,8 @@ case "${subcommand}" in
     echo -e "${PREFIX}: ${VERSION}"
     exit 0
     ;;
+  *)
+    ;;
 esac
 
 if ! type -p "${NAME}-${subcommand}" > "/dev/null" 2>&1; then
