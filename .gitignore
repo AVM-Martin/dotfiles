@@ -1,6 +1,5 @@
-# ignore local config files, but not config directory
-*.local
-!*.local/
+# ignore local config files
+local.*
 
 # ignore zsh
 .config/zsh/.zsh_sessions

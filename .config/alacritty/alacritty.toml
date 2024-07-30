@@ -1,6 +1,6 @@
 import = [
   "~/.config/alacritty/theme.toml",
-  "~/.config/alacritty/config.local",
+  "~/.config/alacritty/local.toml",
 ]
 
 live_config_reload = true

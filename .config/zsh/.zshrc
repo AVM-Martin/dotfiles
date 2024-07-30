@@ -61,4 +61,4 @@ export EDITOR='nvim'
 source "${ZDOTDIR}/zshrc-aliases.zsh"
 
 # shellcheck disable=SC2015
-test -f "${ZDOTDIR}/zshrc.local" && . "${ZDOTDIR}/zshrc.local" || true
+test -f "${ZDOTDIR}/local.zshrc" && . "${ZDOTDIR}/local.zshrc" || true

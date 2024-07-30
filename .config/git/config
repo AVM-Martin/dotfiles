@@ -83,4 +83,4 @@
 	unstage = restore --staged
 
 [include]
-	path = config.local
+	path = local.gitconfig

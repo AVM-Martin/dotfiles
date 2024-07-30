@@ -22,4 +22,4 @@ export skip_global_compinit=1
 source "${ZDOTDIR}/zshenv-xdgvars.zsh"
 
 # shellcheck disable=SC2015
-test -f "${ZDOTDIR}/zshenv.local" && . "${ZDOTDIR}/zshenv.local" || true
+test -f "${ZDOTDIR}/local.zshenv" && . "${ZDOTDIR}/local.zshenv" || true
