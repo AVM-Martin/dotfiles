@@ -11,14 +11,15 @@ if [[ "$(uname)" == "Linux" ]]; then
   test -d "/home/linuxbrew/.linuxbrew" && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv || true)"
 fi
 
-export HOMEBREW_NO_AUTO_UPDATE=1
-
 # shellcheck disable=SC2155
 export GPG_TTY=$(tty)
 
 # turn off global compinit on ubuntu
 # https://gist.github.com/ctechols/ca1035271ad134841284?permalink_comment_id=3401477#gistcomment-3401477
 export skip_global_compinit=1
+
+# export variables for cleaner homedir
+source "${ZDOTDIR}/zshenv-xdgvars.zsh"
 
 # shellcheck disable=SC2015
 test -f "${ZDOTDIR}/zshenv.local" && . "${ZDOTDIR}/zshenv.local" || true
