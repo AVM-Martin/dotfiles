@@ -17,6 +17,7 @@
 
 [advice]
 	addEmptyPathspec = false
+	skippedCherryPicks = false
 
 [status]
 	relativePaths = true
