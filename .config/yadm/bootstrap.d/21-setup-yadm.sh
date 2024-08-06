@@ -18,4 +18,4 @@ fi
 
 # symlink
 mkdir -p "${HOME}/bin"
-ln -sf "${HOME}/.local/lib/yadm/yadm" "${HOME}/bin"
+ln -sf "${HOME}/.local/lib/yadm/yadm" "${HOME}/bin/yadm"
