@@ -1,0 +1,14 @@
+.config/dotbot/install
+.config/dotfiles/bootstrap
+.config/dotfiles/bootstrap.d/*.bash
+.config/ohmyzsh/themes/rkj-repos.zsh-theme
+.config/shell/*
+.config/yadm/bootstrap
+.config/zsh/.zshenv
+.config/zsh/.zprofile
+.config/zsh/.zshrc
+.config/zsh/.zlogin
+.config/zsh/.zlogout
+.config/zsh/*
+.local/script/*
+.zshenv
