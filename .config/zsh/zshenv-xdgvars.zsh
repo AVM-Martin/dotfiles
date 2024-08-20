@@ -1,5 +1,11 @@
 # shellcheck disable=SC2154
 
+# android
+export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
+
+# ansible
+export ANSIBLE_HOME="${XDG_DATA_HOME}/ansible"
+
 # golang
 export GOENV="${XDG_CONFIG_HOME}/go/env"
 export GOPATH="${XDG_DATA_HOME}/go"
