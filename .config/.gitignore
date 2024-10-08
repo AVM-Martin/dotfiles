@@ -1,0 +1,8 @@
+# ignore local config files
+local.*
+
+# ignore zsh
+/zsh/.zsh_sessions
+
+# ignore tmux plugins
+/tmux/plugins
