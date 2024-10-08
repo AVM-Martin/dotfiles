@@ -17,6 +17,13 @@ export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
 # less
 export LESSHISTFILE="${XDG_STATE_HOME}/less/history"
 
+# kubernetes
+export KUBECONFIG="${XDG_CONFIG_HOME}/kube"
+export KUBECACHEDIR="${XDG_CACHE_HOME}/kube"
+
+# minikube
+export MINIKUBE_HOME="${XDG_DATA_HOME}/minikube"
+
 # ncurses
 export TERMINFO="${XDG_DATA_HOME}/terminfo"
 export TERMINFO_DIRS="${XDG_DATA_HOME}/terminfo:/usr/share/terminfo"
