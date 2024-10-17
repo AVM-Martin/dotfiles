@@ -32,4 +32,9 @@ brew "tmux"
 brew "tree"
 brew "zsh"
 
+# https://alexos.dev/2022/01/02/docker-desktop-alternatives-for-m1-mac/
+brew "docker"
+brew "docker-compose"
+brew "colima"
+
 EOS
