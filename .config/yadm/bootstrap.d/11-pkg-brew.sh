@@ -10,6 +10,7 @@ echo -e "${PREFIX}: execute"
 
 if ! type -p "brew" > "/dev/null" 2>&1; then
   echo -e "${PREFIX}: brew is not installed"
+  exit 1
 fi
 
 brew bundle --quiet --no-upgrade --no-lock --file=- <<-EOS
