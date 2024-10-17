@@ -17,6 +17,8 @@ fi
 # shellcheck disable=SC2312
 find -L "${BOOTSTRAP_D}" -type f | sort | while IFS= read -r bootstrap; do
     if [[ -x "${bootstrap}" && ! "${bootstrap}" =~ "##" && ! "${bootstrap}" =~ "~$" ]]; then
+        echo -e "\033[1;96m$(basename "${bootstrap}")\033[0m: execute" >&2
+
         if ! "${bootstrap}"; then
             echo "Error: bootstrap '${bootstrap}' failed" >&2
             exit 1
