@@ -12,7 +12,7 @@ if ! type -p "brew" > "/dev/null" 2>&1; then
   echo -e "${PREFIX}: brew is not installed"
 fi
 
-brew bundle --verbose --no-upgrade --no-lock --file=- <<-EOS
+brew bundle --quiet --no-upgrade --no-lock --file=- <<-EOS
 
 brew "bat"
 brew "coreutils"
