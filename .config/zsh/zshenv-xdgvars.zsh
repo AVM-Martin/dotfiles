@@ -6,6 +6,10 @@ export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
 # ansible
 export ANSIBLE_HOME="${XDG_DATA_HOME}/ansible"
 
+# docker and colima
+export COLIMA_HOME="${XDG_CONFIG_HOME}/colima"
+export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
+
 # golang
 export GOENV="${XDG_CONFIG_HOME}/go/env"
 export GOPATH="${XDG_DATA_HOME}/go"
