@@ -31,3 +31,6 @@ export MINIKUBE_HOME="${XDG_DATA_HOME}/minikube"
 # ncurses
 export TERMINFO="${XDG_DATA_HOME}/terminfo"
 export TERMINFO_DIRS="${XDG_DATA_HOME}/terminfo:/usr/share/terminfo"
+
+# sonar
+export SONARLINT_USER_HOME="${XDG_DATA_HOME}/sonarlint"
