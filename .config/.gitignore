@@ -6,3 +6,6 @@ local.*
 
 # ignore tmux plugins
 /tmux/plugins
+
+# ignore aws credentials
+/aws/credentials
