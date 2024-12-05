@@ -3,7 +3,7 @@
 	email = avmm.martin+github@gmail.com
 	signingkey = 566629832395B5EC74C74E0C25F846A221B3F159
 
-[url "github.miko.INTERNAL:"]
+[url "github.miko.internal:"]
 	insteadOf = github:
 
 [color]
