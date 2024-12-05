@@ -5,11 +5,11 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 
-# shellcheck disable=SC2312
-if [[ "$(uname)" == "Linux" ]]; then
-  test -d "${HOME}/.linuxbrew" && eval "$("${HOME}/.linuxbrew/bin/brew" shellenv || true)"
-  test -d "/home/linuxbrew/.linuxbrew" && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv || true)"
-fi
+# homebrew
+test -d "${HOME}/.linuxbrew" && export HOMEBREW_PREFIX="${HOME}/.linuxbrew"
+test -d "/home/linuxbrew/.linuxbrew" && export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
+test -d "/opt/homebrew" && export HOMEBREW_PREFIX="/opt/homebrew"
+test -d "${HOMEBREW_PREFIX}" && eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv || true)"
 
 # shellcheck disable=SC2155
 export GPG_TTY=$(tty)
