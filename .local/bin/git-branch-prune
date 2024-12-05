@@ -10,6 +10,7 @@ PREFIX="\033[1;96m${NAME}\033[0m"
 readonly NAME PREFIX
 
 dryrun=1
+fetch=1
 
 while (( $# > 0 )); do
   case "$1" in
@@ -30,6 +31,10 @@ while (( $# > 0 )); do
       dryrun=0
       shift # past argument
       ;;
+    -q|--quick)
+      fetch=0
+      shift # past argument
+      ;;
     *)
       echo -e "${PREFIX}: unrecognize argument $1"
       exit 1
@@ -39,7 +44,9 @@ done
 
 readonly dryrun
 
-git fetch --quiet --prune
+if (( fetch == 1 )); then
+  git fetch --quiet --prune
+fi
 
 git for-each-ref --format '%(refname:lstrip=2) %(upstream:track)' refs/heads \
   | awk '$2 == "[gone]" {print $1}' \
