@@ -7,7 +7,7 @@ if ! type -p "brew" > "/dev/null" 2>&1; then
   exit 1
 fi
 
-brew bundle --quiet --no-upgrade --no-lock --file=- <<-EOS
+brew bundle --quiet --no-upgrade --file=- <<-EOS
 
 brew "bat"
 brew "coreutils"
