@@ -5,23 +5,7 @@ Personal configs and libraries, managed under dotfiles.
 
 ## Setup
 
-  * :white_check_mark: Manual (ofc)
-  * :white_check_mark: [Git-Bare](#git-bare)
-  * :grey_question: [Stow](#stow)
-  * :white_check_mark: [Yadm](#yadm)
-  * :white_check_mark: [Dotbot](#dotbot)
-  * :x: Chezmoi
-
-
-### Git Bare
-
-TBA
-
-
-### Stow
-
-TBA
-
+I'll try to comply with popular tools listed in [dotfiles page](https://dotfiles.github.io/utilities/), you can check the details in [this page](INSTALL.md).
 
 ### Yadm
 
@@ -34,16 +18,4 @@ $tempfile clone --no-bootstrap https://github.com/AVM-Martin/dotfiles
 $tempfile submodule update --init --checkout .local/lib/yadm
 $tempfile bootstrap
 rm -rf $tempfile
-```
-
-
-### Dotbot
-
-Repo: https://github.com/anishathalye/dotbot
-
-```bash
-DOTFILES_DIR="$HOME/.local/share/dotfiles"
-
-git clone https://github.com/AVM-Martin/dotfiles $DOTFILES_DIR
-$DOTFILES_DIR/.config/dotbot/install
 ```
