@@ -1,0 +1,19 @@
+Include ~/.config/ssh/local.config
+
+# specific host config
+
+Host github.miko.internal
+  Hostname github.com
+  User git
+  IdentitiesOnly yes
+
+# global config
+
+Host *.avm.internal
+  PreferredAuthentications publickey,password
+
+Host *.avm.internal *.sui.internal *.miko.internal
+  User avm_martin
+  PubkeyAuthentication yes
+  IdentityFile ~/.ssh/id_personal
+  IdentitiesOnly yes
