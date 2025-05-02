@@ -17,6 +17,9 @@ export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 # golang
 export GOENV="${XDG_CONFIG_HOME}/go/env"
 export GOPATH="${XDG_DATA_HOME}/go"
+export GOCACHE="${XDG_CACHE_HOME}/go/build"
+export GOMODCACHE="${XDG_CACHE_HOME}/go/mod"
+# export GOTELEMETRYDIR="${XDG_CACHE_HOME}/go/telemetry" # can not be modified
 export GOBIN="${GOPATH}/bin"
 
 # gpg
@@ -40,7 +43,11 @@ export MINIKUBE_HOME="${XDG_DATA_HOME}/minikube"
 export TERMINFO="${XDG_DATA_HOME}/terminfo"
 export TERMINFO_DIRS="${XDG_DATA_HOME}/terminfo:/usr/share/terminfo"
 
-# nvm for nodejs
+# nodejs (npm and nvm)
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
+export NPM_CONFIG_INIT_MODULE="${XDG_CONFIG_HOME}/npm/config/npm-init.js"
+export NPM_CONFIG_CACHE="${XDG_CACHE_HOME}/npm"
+# export NPM_CONFIG_TMP="${XDG_RUNTIME_DIR}/npm"
 export NVM_DIR="${XDG_DATA_HOME}/nvm"
 
 # sonar
