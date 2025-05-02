@@ -4,4 +4,5 @@
 
 # directory for zsh history and zcompdump
 # shellcheck disable=SC2154
-mkdir -p "${XDG_STATE_HOME}/zsh" "${XDG_CACHE_HOME}/zsh"
+mkdir -p "${HOME}/.cache/zsh"
+mkdir -p "${HOME}/.local/state/zsh"
