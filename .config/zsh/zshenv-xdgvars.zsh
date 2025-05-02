@@ -7,8 +7,8 @@ export ANDROID_USER_HOME="${XDG_DATA_HOME}/android"
 export ANSIBLE_HOME="${XDG_DATA_HOME}/ansible"
 
 # aws
-export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
-export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
+export AWS_SHARED_CREDENTIALS_FILE="${XDG_CONFIG_HOME}/aws/credentials"
+export AWS_CONFIG_FILE="${XDG_CONFIG_HOME}/aws/config"
 
 # docker and colima
 export COLIMA_HOME="${XDG_CONFIG_HOME}/colima"

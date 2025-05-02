@@ -9,7 +9,7 @@ export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 test -d "${HOME}/.linuxbrew" && export HOMEBREW_PREFIX="${HOME}/.linuxbrew"
 test -d "/home/linuxbrew/.linuxbrew" && export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
 test -d "/opt/homebrew" && export HOMEBREW_PREFIX="/opt/homebrew"
-test -d "${HOMEBREW_PREFIX}" && eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv || true)"
+test -d "${HOMEBREW_PREFIX}" && eval "$("${HOMEBREW_PREFIX}/bin/brew" shellenv || true)"
 
 # shellcheck disable=SC2155
 export GPG_TTY=$(tty)

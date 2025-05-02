@@ -48,6 +48,7 @@ if (( fetch == 1 )); then
   git fetch --quiet --prune
 fi
 
+# shellcheck disable=SC2312
 git for-each-ref --format '%(refname:lstrip=2) %(upstream:track)' refs/heads \
   | awk '$2 == "[gone]" {print $1}' \
   | { if (( dryrun == 1 )); then xargs -n 1 echo "Would remove"; else xargs -r git branch -D; fi }

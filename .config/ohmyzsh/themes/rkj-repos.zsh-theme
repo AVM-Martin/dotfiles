@@ -1,3 +1,5 @@
+# shellcheck disable=SC1087,SC2034,SC2154,SC2155,SC2250,SC2312
+
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/rkj-repos.zsh-theme
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/ys.zsh-theme
 
@@ -30,9 +32,9 @@ function mypath() {
 
 function mygit() {
   local ref
-  ref=$(command git symbolic-ref HEAD 2> /dev/null) \
+  ref="$(command git symbolic-ref HEAD 2> /dev/null)" \
     || ref="tag:$(command git describe --tags --exact-match HEAD 2> /dev/null)" \
-    || ref=$(command git rev-parse --short HEAD > /dev/null 2>&1) \
+    || ref="$(command git rev-parse --short HEAD > /dev/null 2>&1)" \
     || return
 
   local short_sha
