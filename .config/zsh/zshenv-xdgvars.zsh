@@ -45,9 +45,6 @@ export TERMINFO_DIRS="${HOME}/.local/share/terminfo:/usr/share/terminfo"
 
 # nodejs (npm and nvm)
 export NPM_CONFIG_USERCONFIG="${HOME}/.config/npm/npmrc"
-export NPM_CONFIG_INIT_MODULE="${HOME}/.config/npm/config/npm-init.js"
-export NPM_CONFIG_CACHE="${HOME}/.cache/npm"
-# export NPM_CONFIG_TMP="${XDG_RUNTIME_DIR}/npm"
 export NVM_DIR="${HOME}/.local/share/nvm"
 
 # sonar

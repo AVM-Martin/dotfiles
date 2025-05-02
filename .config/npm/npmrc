@@ -1,4 +1,5 @@
 prefix=${HOME}/.local/share/npm
 init-module=${HOME}/.config/npm/config/npm-init.js
 cache=${HOME}/.cache/npm
+logs-dir=${HOME}/.local/state/npm/logs
 # tmp=${XDG_RUNTIME_DIR}/npm
