@@ -19,7 +19,7 @@ export GPG_TTY=$(tty)
 export skip_global_compinit=1
 
 # export variables for cleaner homedir
-source "${ZDOTDIR}/zshenv-xdgvars.zsh"
+source "${HOME}/.config/zsh/zshenv-xdgvars.zsh"
 
 # shellcheck disable=SC2015
-test -f "${ZDOTDIR}/local.zshenv" && . "${ZDOTDIR}/local.zshenv" || true
+test -f "${HOME}/.config/zsh/local.zshenv" && . "${HOME}/.config/zsh/local.zshenv"

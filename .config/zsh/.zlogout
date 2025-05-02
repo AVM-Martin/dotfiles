@@ -1,4 +1,1 @@
-# shellcheck disable=SC2154
-
-# shellcheck disable=SC2015
-test -f "${ZDOTDIR}/local.zlogout" && . "${ZDOTDIR}/local.zlogout" || true
+test -f "${HOME}/.config/zsh/local.zlogout" && . "${HOME}/.config/zsh/local.zlogout"

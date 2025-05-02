@@ -1,5 +1,3 @@
-# shellcheck disable=SC2154
-
 # Default prompt
 # PS1="%n@%m %1~ %# "
 
@@ -7,7 +5,7 @@
 export PATH="${HOME}/bin:${HOME}/.local/bin:${PATH}"
 
 export ZSH="${HOME}/.local/lib/ohmyzsh"
-export ZSH_CUSTOM="${XDG_CONFIG_HOME}/ohmyzsh"
+export ZSH_CUSTOM="${HOME}/.config/ohmyzsh"
 
 export ZSH_THEME="rkj-repos"
 export CASE_SENSITIVE="true"
@@ -30,15 +28,17 @@ export plugins=(gnu-utils)
 
 
 # decluttered "$XDG_CONFIG_HOME/zsh"
-autoload -U compinit
-compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump-${ZSH_VERSION}"
-zstyle ':completion:*' cache-path "${XDG_CACHE_HOME}/zsh/zcompcache"
+export ZSH_VERSION
 
-export ZSH_CACHE_DIR="${XDG_CACHE_HOME}/ohmyzsh"
+autoload -U compinit
+compinit -d "${HOME}/.cache/zsh/zcompdump-${ZSH_VERSION}"
+zstyle ':completion:*' cache-path "${HOME}/.cache/zsh/zcompcache"
+
+export ZSH_CACHE_DIR="${HOME}/.cache/ohmyzsh"
 export ZSH_COMPDUMP="${ZSH_CACHE_DIR}/zcompdump-${ZSH_VERSION}"
 
 # https://github.com/novas0x2a/config-files/blob/master/.zshenv#L28
-export HISTFILE="${XDG_STATE_HOME}/zsh/history"
+export HISTFILE="${HOME}/.local/state/zsh/history"
 export HISTSIZE=50000
 export SAVEHIST=50000
 export HISTORY_IGNORE="(cd|clear|exit|htop|less|la|ls|man|pwd)(| *)"
@@ -58,7 +58,6 @@ export EDITOR='nvim'
 # export ARCHFLAGS="-arch x86_64"
 
 # Personal aliases
-source "${ZDOTDIR}/zshrc-aliases.zsh"
+source "${HOME}/.config/zsh/zshrc-aliases.zsh"
 
-# shellcheck disable=SC2015
-test -f "${ZDOTDIR}/local.zshrc" && . "${ZDOTDIR}/local.zshrc" || true
+test -f "${HOME}/.config/zsh/local.zshrc" && . "${HOME}/.config/zsh/local.zshrc"
