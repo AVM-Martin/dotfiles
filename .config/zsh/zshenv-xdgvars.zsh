@@ -22,6 +22,10 @@ export GOBIN="${GOPATH}/bin"
 # gpg
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
 
+# homebrew (brew.env can not expand variables nor ~)
+export HOMEBREW_CACHE="${XDG_CACHE_HOME}/homebrew"
+export HOMEBREW_LOGS="${XDG_CACHE_HOME}/homebrew/logs"
+
 # less
 export LESSHISTFILE="${XDG_STATE_HOME}/less/history"
 
