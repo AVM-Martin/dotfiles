@@ -1,0 +1,30 @@
+#!/bin/bash -e
+#
+# Run shellcheck on files listed inside given filename arguments. Listed
+# filepaths are relative to current directory, or must absolute path if it said
+# so. Any empty lines or line that starts with '#' will be ignored.
+
+NAME="$(basename "$0")"
+PREFIX="\033[1;96m${NAME}\033[0m"
+readonly NAME PREFIX
+
+if ! type -p "shellcheck" > "/dev/null" 2>&1; then
+  echo -e "${PREFIX}: command 'shellcheck' is not found"
+  exit 127
+fi
+
+function shellcheck_from_file() {
+  if [[ ! -f "${1}" ]]; then
+    echo -e "${PREFIX}: file '${1}' not found"
+    return 1
+  fi
+
+  # shellcheck disable=SC2312
+  grep -v '^#' "${1}" | xargs -I % bash -c "shellcheck -s bash -e SC1091 %"
+}
+
+# loop args
+while (( $# > 0 )); do
+  shellcheck_from_file "${1}"
+  shift
+done
