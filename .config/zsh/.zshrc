@@ -27,7 +27,7 @@ zstyle ':omz:lib:history' aliases yes
 export plugins=(gnu-utils)
 
 
-# decluttered "$XDG_CONFIG_HOME/zsh"
+# decluttered zsh config home
 export ZSH_VERSION
 
 autoload -U compinit
