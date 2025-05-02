@@ -21,5 +21,4 @@ export skip_global_compinit=1
 # export variables for cleaner homedir
 source "${HOME}/.config/zsh/zshenv-xdgvars.zsh"
 
-# shellcheck disable=SC2015
-test -f "${HOME}/.config/zsh/local.zshenv" && . "${HOME}/.config/zsh/local.zshenv"
+if test -f "${HOME}/.config/zsh/local.zshenv"; then source "${HOME}/.config/zsh/local.zshenv"; fi

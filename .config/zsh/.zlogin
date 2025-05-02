@@ -1,1 +1,1 @@
-test -f "${HOME}/.config/zsh/local.zlogin" && . "${HOME}/.config/zsh/local.zlogin"
+if test -f "${HOME}/.config/zsh/local.zlogin"; then source "${HOME}/.config/zsh/local.zlogin"; fi
