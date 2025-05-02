@@ -5,7 +5,7 @@ Personal configs and libraries, managed under dotfiles.
 
 ## Setup
 
-I'll try to comply with popular tools listed in [dotfiles page](https://dotfiles.github.io/utilities/), you can check the details in [this page](INSTALL.md).
+I'll try to comply with popular tools listed in [dotfiles page](https://dotfiles.github.io/utilities/), you can check the details in [this page](install.md).
 
 ### Yadm
 
