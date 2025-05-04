@@ -1,0 +1,31 @@
+#!/bin/bash -e
+#
+# Decode JWT token locally, because it may contains sensitive data.
+# Inspired from [1] with modifications.
+#
+# [1]: https://www.jvt.me/posts/2019/06/13/pretty-printing-jwt-openssl/
+
+NAME="$(basename "$0")"
+PREFIX="\033[1;96m${NAME}\033[0m"
+readonly NAME PREFIX
+
+for part in 1 2; do
+  section="$(cut -f"${part}" -d. <<< "${1}")"
+  b64="$(tr '_-' '/+' <<< "${section}")"
+  n=$((${#b64} % 4))
+
+  if (( n == 2 )); then
+    b64="${b64}=="
+  elif (( n == 3 )); then
+    b64="${b64}="
+  fi
+
+  msg="$(openssl enc -base64 -d -A <<< "${b64}")"
+  echo "${msg}"
+
+  # don't decode further if this is an encrypted JWT (JWE)
+  if (( part == 1 )) && grep '"enc":' <<< "${msg}" > /dev/null ; then
+    >&2 echo -e "${PREFIX}: encrypted"
+    exit 0
+  fi
+done
