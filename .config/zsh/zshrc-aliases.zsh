@@ -1,6 +1,6 @@
-alias ls="ls --color=auto -G"
-alias ll="ls --color=auto -G -l"
-alias la="ls --color=auto -G -la"
+alias ls="ls --color=auto"
+alias ll="ls --color=auto -l"
+alias la="ls --color=auto -lA"
 
 alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
 alias fgrep="grep -F --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
