@@ -13,7 +13,7 @@ Repo: https://github.com/TheLocehiliosan/yadm
 
 ```bash
 cd $HOME
-tempfile=$(mktemp) && curl -fLo $tempfile https://github.com/TheLocehiliosan/yadm/raw/3.2.2/yadm && chmod u+x $tempfile
+tempfile=$(mktemp) && curl -fLo $tempfile https://github.com/TheLocehiliosan/yadm/raw/3.5.0/yadm && chmod u+x $tempfile
 $tempfile clone --no-bootstrap https://github.com/AVM-Martin/dotfiles
 $tempfile submodule update --init --checkout .local/lib/yadm
 $tempfile bootstrap
