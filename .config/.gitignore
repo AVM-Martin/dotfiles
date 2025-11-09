@@ -9,3 +9,6 @@ local.*
 
 # ignore aws credentials
 /aws/credentials
+
+# ignore gcloud credentials
+/gcloud/application_default_credentials.json
