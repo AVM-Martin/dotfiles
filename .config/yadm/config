@@ -1,2 +1,3 @@
 [yadm]
+	auto-alt = false
 	auto-private-dirs = false
