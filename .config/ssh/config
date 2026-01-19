@@ -2,7 +2,7 @@ Include ~/.config/ssh/local.config
 
 # specific host config
 
-Host github.miko.internal
+Host github.miko.internal github.com
   Hostname ssh.github.com
   User git
   Port 443
@@ -10,11 +10,19 @@ Host github.miko.internal
 
 # global config
 
-Host *.avm.internal
+Host *.risu.internal
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host *.ame.internal
   PreferredAuthentications publickey,password
 
-Host *.avm.internal *.sui.internal *.miko.internal
+# sui miko sora
+# risu
+# ame ina
+Host *.internal
   User avm_martin
+  PreferredAuthentications publickey
   PubkeyAuthentication yes
   IdentityFile ~/.ssh/id_personal
   IdentitiesOnly yes
