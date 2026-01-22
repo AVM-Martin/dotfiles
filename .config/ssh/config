@@ -2,11 +2,10 @@ Include ~/.config/ssh/local.config
 
 # specific host config
 
-Host github.miko.internal github.com
+Host github.miko.internal
   Hostname ssh.github.com
   User git
   Port 443
-  IdentitiesOnly yes
 
 # global config
 

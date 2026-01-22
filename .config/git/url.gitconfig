@@ -1,10 +1,11 @@
-[url "github.miko.internal:"]
+[url "ssh://github.miko.internal/"]
 	insteadOf = github:
 
-[url "github.miko.internal:AVM-Martin/"]
+[url "ssh://github.miko.internal/AVM-Martin/"]
 	insteadOf = avm:
 	insteadOf = https://github.com/AVM-Martin/
 
 # generic config, will use default SSH identity file
-[url "github.com:"]
+[url "ssh://git@ssh.github.com:443/"]
 	insteadOf = https://github.com/
+	insteadOf = git@github.com:
