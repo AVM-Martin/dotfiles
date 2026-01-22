@@ -23,5 +23,4 @@ Host *.internal
   User avm_martin
   PreferredAuthentications publickey
   PubkeyAuthentication yes
-  IdentityFile ~/.ssh/id_personal
   IdentitiesOnly yes
