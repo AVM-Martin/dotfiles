@@ -1,5 +1,3 @@
-# shellcheck disable=SC2154
-
 # android
 export ANDROID_USER_HOME="${HOME}/.local/share/android"
 
