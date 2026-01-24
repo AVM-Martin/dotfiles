@@ -1,0 +1,62 @@
+{
+    // vscode config
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.renderSideBySide": false,
+    "editor.accessibilitySupport": "off",
+    "editor.bracketPairColorization.enabled": false,
+    "editor.fontFamily": "Jetbrains Mono",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 10,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        80,
+        100,
+        120,
+    ],
+    "editor.showDeprecated": true,
+    "editor.showUnused": true,
+    "editor.snippetSuggestions": "top",
+    "editor.tabSize": 4,
+    "editor.trimAutoWhitespace": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "explorer.excludeGitIgnore": false,
+    "files.associations": {
+        ".env": "ini"
+    },
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.project": true,
+        "**/.settings": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "search.exclude": {
+        "**/go.sum": true,
+        "**/logs": true
+    },
+    "search.useGlobalIgnoreFiles": true,
+    "search.useIgnoreFiles": true,
+    "update.mode": "none",
+    "update.showReleaseNotes": false,
+    "window.title": "${rootName}${separator}${profileName}",
+    "workbench.colorTheme": "Monokai",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.settings.editor": "ui",
+    "workbench.settings.useSplitJSON": false,
+    "workbench.startupEditor": "none",
+    // github copilot
+    "editor.lightbulb.enabled": "off",
+    "chat.agent.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "chat.disableAIFeatures": false,
+    "github.copilot.enable": false,
+    // extensions
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+}
