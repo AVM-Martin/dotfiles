@@ -10,6 +10,7 @@ I'll try to comply with popular tools listed in [dotfiles page](https://dotfiles
 ### Yadm
 
 Repo: https://github.com/TheLocehiliosan/yadm
+(`3.5.0`)
 
 ```bash
 cd $HOME

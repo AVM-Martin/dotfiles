@@ -12,6 +12,8 @@
 
 ## Git Bare
 
+:white_check_mark: Supported
+
 TBA
 
 
@@ -20,9 +22,12 @@ TBA
 TBA
 
 
-### Dotbot
+## Dotbot
+
+:white_check_mark: Supported
 
 Repo: https://github.com/anishathalye/dotbot
+(`v1.20.1`)
 
 ```bash
 DOTFILES_DIR="$HOME/.local/share/dotfiles"
@@ -34,7 +39,10 @@ $DOTFILES_DIR/.config/dotbot/install
 
 ## Chezmoi
 
+:x: Not Supported
+
 Repo: https://github.com/twpayne/chezmoi
+(`v2.60.1`)
 
 > What are chezmoi's key features?
 >   * Flexible
@@ -53,7 +61,10 @@ hence vendor agnosticism is harder to achieve.
 
 ## Mackup
 
+:warning: Partially Supported
+
 Repo: https://github.com/lra/mackup
+(`0.10.1`)
 
 TBA
 
