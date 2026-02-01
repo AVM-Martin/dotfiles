@@ -60,4 +60,7 @@ export EDITOR='nvim'
 # Personal aliases
 source "${HOME}/.config/zsh/zshrc-aliases.zsh"
 
+# load unified config
+source "${HOME}/.config/shell/rc.bash"
+
 if test -f "${HOME}/.config/zsh/local.zshrc"; then source "${HOME}/.config/zsh/local.zshrc"; fi
