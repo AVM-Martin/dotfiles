@@ -1,5 +1,8 @@
 [general]
-import = ["theme.toml", "local.toml"] # relative to this file
+import = [ # '${HOME}' is unrecognize, use '~' instead
+    "~/.config/alacritty/theme.toml",
+    "~/.config/alacritty/local.toml",
+]
 live_config_reload = true
 #ipc_socket = true # Offer IPC using `alacritty msg` (unix only)
 
