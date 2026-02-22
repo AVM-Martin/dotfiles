@@ -7,7 +7,7 @@
   * :grey_question: [GNU Stow](#gnu-stow)
   * :grey_question: [Home Manager](#home-manager)
   * :warning: [Mackup](#mackup)
-  * :white_check_mark: [Yadm](README.md#yadm)
+  * :white_check_mark: [Yadm](readme.md#yadm)
 
 
 ## Git Bare
