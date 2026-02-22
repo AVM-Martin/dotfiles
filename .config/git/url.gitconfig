@@ -6,9 +6,10 @@
 [url "ssh://github.miko.internal/AVM-Martin/"]
 	insteadOf = avm:
 	insteadOf = https://github.com/AVM-Martin/
+	insteadOf = git@github.com:AVM-Martin/
 
 # generic config, will use default SSH identity file
 [url "ssh://git@ssh.github.com:443/"]
-	insteadOf = https://github.com/
+	# do not use ssh for public github repositories
 	insteadOf = git@github.com:
 	pushInsteadOf = https://gist.github.com/

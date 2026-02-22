@@ -59,6 +59,7 @@
 
 [alias]
 	ap = add --patch
+	bd = branch-delete # see .local/bin/git-branch-delete
 	br = branch --sort committerdate -vv
 	cb = checkout -b
 	co = checkout
@@ -80,5 +81,5 @@
 	unstage = restore --staged
 
 [include]
-	path = url.gitconfig
-	path = local.gitconfig
+	path = ~/.config/git/url.gitconfig
+	path = ~/.config/git/local.gitconfig
