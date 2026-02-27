@@ -4,10 +4,10 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
 # homebrew if installed
-test -d "${HOME}/.linuxbrew" && export HOMEBREW_PREFIX="${HOME}/.linuxbrew"
-test -d "/home/linuxbrew/.linuxbrew" && export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
-test -d "/opt/homebrew" && export HOMEBREW_PREFIX="/opt/homebrew"
-test -d "${HOMEBREW_PREFIX}" && eval "$("${HOMEBREW_PREFIX}/bin/brew" shellenv || true)"
+export PATH="/opt/homebrew:/home/linuxbrew/.linuxbrew:${HOME}/.linuxbrew${PATH:+:${PATH}}"
+if ! type -p "brew" > "/dev/null" 2>&1; then
+  eval "$(brew shellenv || true)"
+fi
 
 # shellcheck disable=SC2155
 export GPG_TTY=$(tty)
