@@ -8,7 +8,9 @@ if type -p "brew" > "/dev/null" 2>&1; then
 fi
 
 # invoke sudo command before run non-interactive installation
-sudo echo "hello"
+if [[ "${EUID:-${UID}}" != "0" ]]; then
+  sudo echo "hello"
+fi
 
 # install homebrew
 NONINTERACTIVE=1 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh || true)"
