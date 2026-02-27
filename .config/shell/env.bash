@@ -4,8 +4,8 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
 # homebrew if installed
-export PATH="/opt/homebrew:/home/linuxbrew/.linuxbrew:${HOME}/.linuxbrew${PATH:+:${PATH}}"
-if ! type -p "brew" > "/dev/null" 2>&1; then
+export PATH="/opt/homebrew/bin:/home/linuxbrew/.linuxbrew/bin:${HOME}/.linuxbrew/bin${PATH:+:${PATH}}"
+if type -p "brew" > "/dev/null" 2>&1; then
   eval "$(brew shellenv || true)"
 fi
 
