@@ -7,4 +7,4 @@ if ! type -p "brew" > "/dev/null" 2>&1; then
   exit 0
 fi
 
-brew bundle --quiet --no-upgrade --file Brewfile
+brew bundle --quiet --no-upgrade --file "$(dirname "${BASH_SOURCE[0]}")/Brewfile"
