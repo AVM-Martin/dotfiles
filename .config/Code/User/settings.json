@@ -24,7 +24,9 @@
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "explorer.excludeGitIgnore": false,
     "files.associations": {
-        ".env": "ini"
+        "*.env": "ini",
+        "*.vim": "lua",
+        "*.tfbackend": "opentofu-vars",
     },
     "files.autoSave": "onFocusChange",
     "files.exclude": {
@@ -53,9 +55,12 @@
     // github copilot
     "editor.lightbulb.enabled": "off",
     "chat.agent.enabled": false,
+    "chat.autopilot.enabled": false,
     "chat.commandCenter.enabled": false,
-    "chat.disableAIFeatures": false,
+    "chat.disableAIFeatures": true,
     "github.copilot.enable": false,
+    // telemetry
+    "telemetry.telemetryLevel": "crash",
     // extensions
     "extensions.autoUpdate": false,
     "extensions.autoCheckUpdates": false,
