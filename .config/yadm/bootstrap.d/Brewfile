@@ -1,11 +1,15 @@
 brew "bat"
+brew "bcrypt"
 brew "coreutils"
 brew "diffutils"
+brew "cups"
+brew "exiftool"
 brew "findutils"
 brew "git"
 brew "gnu-tar"
 brew "grep"
 brew "htop"
+brew "imagemagick"
 brew "jq"
 brew "less"
 brew "neofetch"
@@ -21,3 +25,7 @@ brew "docker"
 brew "docker-buildx"
 brew "docker-compose"
 brew "colima" if OS.mac?
+
+# gpg-related
+brew "gnupg" if OS.mac?
+brew "pinentry" if OS.mac?
