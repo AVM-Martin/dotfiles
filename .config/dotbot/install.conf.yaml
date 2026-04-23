@@ -5,6 +5,7 @@
       glob: true
 
 - link:
+    ~/.editorconfig: .editorconfig
     ~/.zshenv: .zshenv
     ~/.config/: .config/*
     ~/.local/bin: .local/bin/*

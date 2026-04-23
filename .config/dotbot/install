@@ -3,14 +3,14 @@
 # Bootstrap script for dotbot. Snatched with modification on variable value.
 # Refs: https://github.com/anishathalye/dotbot/blob/840cd164d20713a8e34f3aeb4ab1121c9745fad9/tools/git-submodule/install
 
-CONFIG=".config/dotbot/install.conf.yaml"
-DOTBOT_DIR=".local/lib/dotbot"
-
-DOTBOT_BIN="bin/dotbot"
+# dotfiles root repository absolute path
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")"/../.. && pwd)"
+
+CONFIG="${BASEDIR}/.config/dotbot/install.conf.yaml"
+DOTBOT_DIR="${BASEDIR}/.local/lib/dotbot"
 
 cd "${BASEDIR}"
 git submodule update --init
 git submodule update --init --recursive --checkout "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+"${DOTBOT_DIR}/bin/dotbot" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
