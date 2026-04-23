@@ -3,6 +3,7 @@
 
 # If you come from bash you might have to change your $PATH.
 export PATH="${HOME}/bin:${HOME}/.local/bin:${PATH}"
+typeset -U path
 
 export ZSH="${HOME}/.local/lib/ohmyzsh"
 export ZSH_CUSTOM="${HOME}/.config/ohmyzsh"
