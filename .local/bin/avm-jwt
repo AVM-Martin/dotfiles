@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -eu
 #
 # Decode JWT token locally, because it may contains sensitive data.
 # Inspired from [1] with modifications.

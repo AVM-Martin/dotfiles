@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -eu
 #
 # Run shellcheck on files listed inside given filename arguments. Listed
 # filepaths are relative to current directory, or must absolute path if it said

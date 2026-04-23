@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -eu
 #
 # Delete gone branches from a local repository.
 # Inspired from [1] with modifications.
