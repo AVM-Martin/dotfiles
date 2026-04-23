@@ -1,3 +1,8 @@
+# Bootstrap: install basic package using homebrew.
+# See [1] for details.
+#
+# [1]: https://docs.brew.sh/Brew-Bundle-and-Brewfile
+
 brew "bat"
 brew "bcrypt"
 brew "cups"
@@ -33,8 +38,22 @@ brew "colima" if OS.mac?
 brew "gnupg" if OS.mac?
 brew "pinentry" if OS.mac?
 
+# engineering-related
+brew "ansible"
+brew "ansible-lint"
+brew "go"
+
+# desktop app, macos only
+cask "alacritty", args: { no_quarantine: true }
+cask "discord"
+cask "firefox"
+cask "google-chrome"
+cask "visual-studio-code"
+cask "whatsapp"
+
 # macos-specific app
 brew "mas" if OS.mac?
 mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
