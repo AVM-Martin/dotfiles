@@ -7,6 +7,11 @@ if type -p "brew" > "/dev/null" 2>&1; then
   exit 0
 fi
 
+if [[ -n "${DOTFILES_MINIMAL:-}" ]]; then
+  echo -e "minimal bootstrap, skipped"
+  exit 0
+fi
+
 # invoke sudo command before run non-interactive installation
 if [[ "${EUID:-${UID}}" != "0" ]]; then
   sudo echo "hello"

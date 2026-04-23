@@ -11,6 +11,11 @@ if type -p "starship" > "/dev/null" 2>&1; then
   fi
 fi
 
+if [[ -n "${DOTFILES_MINIMAL:-}" ]]; then
+  echo -e "minimal bootstrap, skipped"
+  exit 0
+fi
+
 tempfile=$(mktemp)
 curl -fsSLo "${tempfile}" https://starship.rs/install.sh
 chmod u+x "${tempfile}"
