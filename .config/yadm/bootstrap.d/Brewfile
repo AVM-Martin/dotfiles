@@ -32,3 +32,9 @@ brew "colima" if OS.mac?
 # gpg-related
 brew "gnupg" if OS.mac?
 brew "pinentry" if OS.mac?
+
+# macos-specific app
+brew "mas" if OS.mac?
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
