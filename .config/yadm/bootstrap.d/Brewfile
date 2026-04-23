@@ -1,13 +1,8 @@
 brew "bat"
 brew "bcrypt"
-brew "coreutils"
-brew "diffutils"
 brew "cups"
 brew "exiftool"
-brew "findutils"
 brew "git"
-brew "gnu-tar"
-brew "grep"
 brew "htop"
 brew "imagemagick"
 brew "jq"
@@ -19,6 +14,14 @@ brew "telnet" if OS.mac?
 brew "tmux"
 brew "tree"
 brew "zsh"
+
+# better binary from GNU
+brew "coreutils"
+brew "diffutils"
+brew "findutils"
+brew "gawk" if OS.mac?
+brew "gnu-tar"
+brew "grep"
 
 # https://alexos.dev/2022/01/02/docker-desktop-alternatives-for-m1-mac/
 brew "docker"
