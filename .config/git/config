@@ -83,3 +83,7 @@
 [include]
 	path = ~/.config/git/url.gitconfig
 	path = ~/.config/git/local.gitconfig
+
+# yadm-related config
+[includeIf "gitdir:~/.local/share/yadm/repo.git"]
+	path = ~/.config/yadm/gitconfig

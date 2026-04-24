@@ -1,0 +1,4 @@
+# see ~/.config/git/config
+
+[alias]
+    ls-ignored = ls-files -o -i -x 'local.*'
