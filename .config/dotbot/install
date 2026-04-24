@@ -9,8 +9,7 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")"/../.. && pwd)"
 CONFIG="${BASEDIR}/.config/dotbot/install.conf.yaml"
 DOTBOT_DIR="${BASEDIR}/.local/lib/dotbot"
 
-cd "${BASEDIR}"
-git submodule update --init
-git submodule update --init --recursive --checkout "${DOTBOT_DIR}"
+git -C "${BASEDIR}" submodule update --init
+git -C "${BASEDIR}" submodule update --init --recursive --checkout "${DOTBOT_DIR}"
 
 "${DOTBOT_DIR}/bin/dotbot" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
