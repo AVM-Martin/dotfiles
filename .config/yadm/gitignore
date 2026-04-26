@@ -1,0 +1,15 @@
+# global ignore files in home directories
+.DS_Store
+
+# ignore macos default directories
+/Desktop/
+/Documents/
+/Downloads/
+/Library/
+/Movies/
+/Music/
+/Pictures/
+/Public/
+
+# ignore known dirs and files
+/.ssh/
