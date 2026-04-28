@@ -1,8 +1,10 @@
+# see .config/ssh/config
 [url "ssh://github.miko.internal/"]
 	insteadOf = github:
 	insteadOf = gist:
 	pushInsteadOf = https://gist.github.com/AVM-Martin/
 
+# see .config/ssh/config
 [url "ssh://github.miko.internal/AVM-Martin/"]
 	insteadOf = avm:
 	insteadOf = git@github.com:AVM-Martin/
