@@ -1,14 +1,7 @@
 # ignore local config files
 local.*
 
-# ignore zsh
-/zsh/.zsh_sessions
-
-# ignore tmux plugins
-/tmux/plugins
-
-# ignore aws credentials
+# credentials
 /aws/credentials
-
-# ignore gcloud credentials
 /gcloud/application_default_credentials.json
+/gcloud/docker_credentials.json
