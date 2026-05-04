@@ -7,7 +7,7 @@ Personal configs and libraries, managed under dotfiles.
 
 I'll try to comply with popular tools listed in [dotfiles page](https://dotfiles.github.io/utilities/), you can check the details in [this page](install.md).
 
-### Yadm
+### yadm
 
 Repo: https://github.com/TheLocehiliosan/yadm
 (`3.5.0`)
@@ -17,6 +17,9 @@ cd $HOME
 tempfile=$(mktemp) && curl -fLo $tempfile https://github.com/TheLocehiliosan/yadm/raw/3.5.0/yadm && chmod u+x $tempfile
 $tempfile clone --no-bootstrap https://github.com/AVM-Martin/dotfiles
 $tempfile submodule update --init --checkout .local/lib/yadm
+
+# export DOTFILES_MINIMAL=1
 $tempfile bootstrap
-rm -rf $tempfile
+
+rm $tempfile && unset tempfile
 ```
