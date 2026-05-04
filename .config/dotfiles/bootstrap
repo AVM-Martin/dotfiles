@@ -3,9 +3,8 @@
 # Run bootstrap scripts inside `./bootstrap.d/`. Snatched with modification.
 # Refs: https://github.com/TheLocehiliosan/yadm/blob/0a5e7aa353621bd28a289a50c0f0d61462b18c76/contrib/bootstrap/bootstrap-in-dir
 
-# Save this file as ~/.config/yadm/bootstrap and make it executable. It will
-# execute all executable files (excluding templates and editor backups) in the
-# ~/.config/yadm/bootstrap.d directory when run.
+# shellcheck disable=SC1091
+source "${HOME}/.config/shell/env.bash"
 
 BOOTSTRAP_D="${BASH_SOURCE[0]}.d"
 
