@@ -1,0 +1,8 @@
+[core]
+	excludesFile = ~/.config/git/dotfiles-gitbare.gitignore
+
+[status]
+	showUntrackedFiles = no
+
+[alias]
+	ls-ignored = ls-files -o -i -x 'local.*'

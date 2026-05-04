@@ -1,5 +1,0 @@
-[core]
-	excludesFile = ~/.config/yadm/gitignore
-
-[alias]
-    ls-ignored = ls-files -o -i -x 'local.*'

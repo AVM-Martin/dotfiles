@@ -1,6 +1,6 @@
 # golang
-/go/src/
 /go/pkg/
+/go/src/
 
 # ncurses
 /terminfo/

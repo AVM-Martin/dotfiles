@@ -88,6 +88,10 @@
 	path = ~/.config/git/url.gitconfig
 	path = ~/.config/git/local.gitconfig
 
+# gitbare-related config
+[includeIf "gitdir:~/.local/share/dotfiles/bare.git"]
+	path = ~/.config/git/dotfiles-gitbare.gitconfig
+
 # yadm-related config
 [includeIf "gitdir:~/.local/share/yadm/repo.git"]
-	path = ~/.config/yadm/gitconfig
+	path = ~/.config/git/dotfiles-gitbare.gitconfig

@@ -14,7 +14,23 @@
 
 :white_check_mark: Supported
 
-TBA
+Although this is feasible, it is better to use [yadm](readme.md#yadm).
+
+```bash
+DOTFILES_DIR="$HOME/.local/share/dotfiles/bare.git"
+alias dotfiles="git --git-dir='$DOTFILES_DIR' --work-tree='$HOME'"
+echo 'alias dotfiles="git --git-dir='$DOTFILES_DIR' --work-tree='$HOME'"' >> "$HOME/.bashrc"
+
+cd $HOME
+git clone --bare https://github.com/AVM-Martin/dotfiles $DOTFILES_DIR
+dotfiles checkout
+dotfiles submodule update --init
+
+# export DOTFILES_MINIMAL=1
+$HOME/.config/dotfiles/bootstrap
+
+unset DOTFILES_DIR
+```
 
 
 ## GNU Stow
