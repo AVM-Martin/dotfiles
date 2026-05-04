@@ -1,2 +1,5 @@
 # ignore yadm directory
-/share/yadm/repo.git
+/share/yadm/repo.git/
+
+# ignore gpg home
+/share/gnupg/

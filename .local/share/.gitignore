@@ -1,0 +1,12 @@
+# golang
+/go/src/
+/go/pkg/
+
+# ncurses
+/terminfo/
+
+# nvim
+/nvim/plugged/
+
+# tmux resurrect
+/tmux/resurrect/
