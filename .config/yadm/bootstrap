@@ -1,6 +1,6 @@
 #!/bin/bash -eu
 #
-# Bootstrap: setup yadm's dependencies.
+# Run bootstrap scripts, must be invoked by yadm
 
 YADM_BIN_PATH="${HOME}/.local/lib/yadm/yadm"
 
@@ -15,3 +15,7 @@ fi
 # symlink
 mkdir -p "${HOME}/bin"
 ln -sf "${YADM_BIN_PATH}" "${HOME}/bin/yadm"
+
+# call generic dotfiles bootstrapper
+# shellcheck disable=SC1091
+source "${HOME}/.config/dotfiles/bootstrap"
