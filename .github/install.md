@@ -33,7 +33,12 @@ Repo: https://github.com/anishathalye/dotbot
 DOTFILES_DIR="$HOME/.local/share/dotfiles"
 
 git clone https://github.com/AVM-Martin/dotfiles $DOTFILES_DIR
+git -C $DOTFILES_DIR submodule update --init --checkout .local/lib/dotbot
+
+# export DOTFILES_MINIMAL=1
 $DOTFILES_DIR/.config/dotbot/install
+
+unset DOTFILES_DIR
 ```
 
 
