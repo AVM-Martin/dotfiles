@@ -1,7 +1,8 @@
 # global ignore files in home directories
 .DS_Store
 
-# ignore macos known directories and files
+# ignore linux and macos known directories and files
+/.Trash/
 /Desktop/
 /Documents/
 /Downloads/
@@ -10,9 +11,12 @@
 /Music/
 /Pictures/
 /Public/
-/.Trash/
+/snap/
+/Templates/
+/Videos/
 
 /.CFUserTextEncoding
+/.sudo_as_admin_successful
 
 # ignore known dirs and files
 /.ssh/
