@@ -9,6 +9,13 @@ fi
 
 # symlink settings on macos
 if [[ "$(uname -s || true)" == "Darwin" ]]; then
-  mkdir -p "${HOME}/Library/Application Support/Code/User/"
-  ln -sf "${HOME}/.config/Code/User/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
+  readonly CONFIG_LINUX_HOME="${HOME}/.config/Code/User"
+  readonly CONFIG_MACOS_HOME="${HOME}/Library/Application Support/Code"
+
+  mkdir -p "${CONFIG_MACOS_HOME}/User/"
+
+  # shellcheck disable=SC2312
+  find "${CONFIG_LINUX_HOME}" -mindepth 1 -maxdepth 1 | while IFS= read -r linked; do
+    ln -sf "${linked}" "${CONFIG_MACOS_HOME}/User/"
+  done
 fi
