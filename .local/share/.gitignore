@@ -1,9 +1,12 @@
+# ignore all
+/cargo/
+/nvm/
+/sonarlint/
+/terminfo/
+
 # golang
 /go/pkg/
 /go/src/
-
-# ncurses
-/terminfo/
 
 # nvim
 /nvim/plugged/

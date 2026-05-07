@@ -48,5 +48,12 @@ export TERMINFO_DIRS="${HOME}/.local/share/terminfo:/usr/share/terminfo"
 export NPM_CONFIG_USERCONFIG="${HOME}/.config/npm/npmrc"
 export NVM_DIR="${HOME}/.local/share/nvm"
 
+# python
+export PYTHONSTARTUP="${HOME}/.config/python/pythonrc"
+export PYTHON_HISTORY="${HOME}/.local/state/python_history"
+
 # sonar
 export SONARLINT_USER_HOME="${HOME}/.local/share/sonarlint"
+
+# rust
+export CARGO_HOME="${HOME}/.local/share/cargo"
