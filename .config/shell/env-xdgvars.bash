@@ -3,6 +3,11 @@ export ANDROID_USER_HOME="${HOME}/.local/share/android"
 
 # ansible
 export ANSIBLE_HOME="${HOME}/.local/share/ansible"
+# ANSIBLE_CONFIG is unset because it will override project-specific config file
+export ANSIBLE_GALAXY_CACHE_DIR="${HOME}/.cache/ansible/galaxy_cache"
+export ANSIBLE_LOCAL_TEMP="${HOME}/.cache/ansible/tmp"
+export ANSIBLE_SSH_CONTROL_PATH_DIR="${HOME}/.cache/ansible/cp"
+export ANSIBLE_ASYNC_DIR="${HOME}/.cache/ansible_async"
 
 # aws
 export AWS_SHARED_CREDENTIALS_FILE="${HOME}/.config/aws/credentials"
@@ -17,7 +22,7 @@ export GOENV="${HOME}/.config/go/env"
 export GOPATH="${HOME}/.local/share/go"
 export GOCACHE="${HOME}/.cache/go/build"
 export GOMODCACHE="${HOME}/.cache/go/mod"
-# export GOTELEMETRYDIR="${HOME}/.cache/go/telemetry" # can not be modified
+# GOTELEMETRYDIR can not be modified
 export GOBIN="${GOPATH}/bin"
 
 # gpg
@@ -27,15 +32,13 @@ export GNUPGHOME="${HOME}/.local/share/gnupg"
 export HOMEBREW_CACHE="${HOME}/.cache/homebrew"
 export HOMEBREW_LOGS="${HOME}/.cache/homebrew/logs"
 
-# less
-export LESSHISTFILE="${HOME}/.local/state/less/history"
-
-# kubernetes
+# kubernetes and minikube
 export KUBECONFIG="${HOME}/.config/kube"
 export KUBECACHEDIR="${HOME}/.cache/kube"
-
-# minikube
 export MINIKUBE_HOME="${HOME}/.local/share/minikube"
+
+# less (backward support)
+export LESSHISTFILE="${HOME}/.local/state/lesshst"
 
 # ncurses
 export TERMINFO="${HOME}/.local/share/terminfo"
