@@ -27,6 +27,7 @@
         "*.env": "ini",
         "*.vim": "lua",
         "*.tfbackend": "opentofu-vars",
+        "gitignore": "ignore",
     },
     "files.autoSave": "onFocusChange",
     "files.exclude": {

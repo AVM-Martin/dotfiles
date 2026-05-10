@@ -3,6 +3,7 @@
 
 # ignore linux and macos known directories and files
 /.Trash/
+/Applications/
 /Desktop/
 /Documents/
 /Downloads/
@@ -18,5 +19,6 @@
 /.CFUserTextEncoding
 /.sudo_as_admin_successful
 
-# ignore known dirs and files
+# ignore unsupported dirs and files
+/.cups/
 /.ssh/
