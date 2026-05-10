@@ -39,7 +39,7 @@ while (( $# > 0 )); do
   esac
 done
 
-set -- "${POSITIONAL_ARGS[@]}"
+set -- "${POSITIONAL_ARGS[@]+"${POSITIONAL_ARGS[@]}"}"
 
 # shellcheck disable=SC2154
 cd "${GOPATH}/src" || exit 1
