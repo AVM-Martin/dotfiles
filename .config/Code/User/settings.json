@@ -53,6 +53,11 @@
     "workbench.settings.editor": "ui",
     "workbench.settings.useSplitJSON": false,
     "workbench.startupEditor": "none",
+    // integrated terminal
+    "terminal.integrated.initialHint": false,
+    "terminal.integrated.macOptionIsMeta": true,
+    "terminal.integrated.shellIntegration.enabled": false,
+    "terminal.integrated.suggest.enabled": false,
     // github copilot
     "editor.lightbulb.enabled": "off",
     "chat.agent.enabled": false,
