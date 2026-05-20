@@ -61,8 +61,8 @@
 
 [alias]
 	ap = add --patch
-	bd = branch-delete # see .local/bin/git-branch-delete
-	bp = branch-prune # see .local/bin/git-branch-prune
+	bd = branch-delete # see .local/script/git-branch-delete
+	bp = branch-prune # see .local/script/git-branch-prune
 	br = branch --sort committerdate -vv
 	cb = checkout -b
 	co = checkout

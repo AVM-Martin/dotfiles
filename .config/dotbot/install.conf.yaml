@@ -10,8 +10,8 @@
     ~/.config/:
       path: .config/*
       exclude: [".config/dotbot"]
-    ~/.local/bin: .local/bin/*
     ~/.local/lib: .local/lib/*
+    ~/.local/script: .local/script/*
     ~/.local/share:
       path: .local/share/*
       exclude: [".local/share/dotfiles"]
