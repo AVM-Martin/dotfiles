@@ -7,7 +7,6 @@
 # see .config/ssh/config
 [url "ssh://github.miko.internal/AVM-Martin/"]
 	insteadOf = avm:
-	insteadOf = git@github.com:AVM-Martin/
 	pushInsteadOf = https://github.com/AVM-Martin/
 
 # generic config, will use default SSH identity file
