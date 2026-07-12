@@ -1,5 +1,4 @@
 {
-    // vscode config
     "diffEditor.hideUnchangedRegions.enabled": true,
     "diffEditor.renderSideBySide": false,
     "editor.accessibilitySupport": "off",
@@ -53,21 +52,29 @@
     "workbench.settings.editor": "ui",
     "workbench.settings.useSplitJSON": false,
     "workbench.startupEditor": "none",
+    //
     // integrated terminal
+    //
     "terminal.integrated.initialHint": false,
     "terminal.integrated.macOptionIsMeta": true,
     "terminal.integrated.shellIntegration.enabled": false,
     "terminal.integrated.suggest.enabled": false,
+    //
     // github copilot
+    //
     "editor.lightbulb.enabled": "off",
     "chat.agent.enabled": false,
     "chat.autopilot.enabled": false,
     "chat.commandCenter.enabled": false,
     "chat.disableAIFeatures": true,
     "github.copilot.enable": false,
+    //
     // telemetry
+    //
     "telemetry.telemetryLevel": "crash",
+    //
     // extensions
+    //
     "extensions.autoUpdate": false,
     "extensions.autoCheckUpdates": false,
 }
