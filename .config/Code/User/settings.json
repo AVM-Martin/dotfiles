@@ -60,13 +60,17 @@
     "terminal.integrated.shellIntegration.enabled": false,
     "terminal.integrated.suggest.enabled": false,
     //
-    // github copilot
+    // github copilot and other AI stuffs
     //
     "editor.lightbulb.enabled": "off",
     "chat.agent.enabled": false,
     "chat.autopilot.enabled": false,
     "chat.commandCenter.enabled": false,
     "chat.disableAIFeatures": true,
+    "chat.extensionTools.enabled": false,
+    "chat.extensionUnification.enabled": false,
+    "chat.generalPurposeAgent.enabled": false,
+    "chat.plugins.enabled": false,
     "github.copilot.enable": false,
     //
     // telemetry
