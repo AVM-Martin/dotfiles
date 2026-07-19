@@ -3,8 +3,16 @@
 	email = avmm.martin+github@gmail.com
 	signingkey = 566629832395B5EC74C74E0C25F846A221B3F159
 
+[advice]
+	addEmptyPathspec = false
+	skippedCherryPicks = false
+
 [color]
 	ui = auto
+
+[commit]
+	gpgSign = true
+	template = ~/.config/git/commit_message
 
 [core]
 	eol = lf
@@ -12,23 +20,32 @@
 	excludesFile = ~/.config/git/ignore
 	attributesFile = ~/.config/git/attributes
 
-[advice]
-	addEmptyPathspec = false
-	skippedCherryPicks = false
-
-[status]
-	relativePaths = true
-	showStash = false
-
-[log]
-	date = iso8601-strict
+[fetch]
+	prune = true
+	pruneTags = true
 
 [init]
 	defaultBranch = main
 
-[commit]
-	gpgSign = true
-	template = ~/.config/git/commit_message
+[log]
+	date = iso8601-strict
+
+[pager]
+	branch = false
+
+[pull]
+	rebase = true
+
+[push]
+	default = simple
+	followTags = true
+
+[rebase]
+	autoStash = true
+
+[status]
+	relativePaths = true
+	showStash = false
 
 [tag]
 	gpgSign = true
@@ -37,58 +54,9 @@
 [versionsort]
 	suffix = -
 
-[push]
-	default = simple
-	followTags = true
-
-[fetch]
-	prune = true
-	pruneTags = true
-
-[pull]
-	rebase = true
-
-[rebase]
-	autoStash = true
-
-[pager]
-	aliases = false
-	branch = false
-	last = false
-	lg = false
-	sl = false
-	spop = false
-
-[alias]
-	ap = add --patch
-	bd = branch-delete # see .local/script/git-branch-delete
-	bp = branch-prune # see .local/script/git-branch-prune
-	br = branch --sort committerdate -vv
-	cb = checkout -b
-	co = checkout
-	cp = cherry-pick
-	dc = diff --cached
-	gl = config --global --list --includes
-	lg = log --max-count 25 --oneline --reverse
-	pu = !"git push --set-upstream \"${1:-origin}\" \"${2:-$(git branch --show-current)}\" && :"
-	sl = stash list
-	sm = show --diff-filter=M
-	st = status --show-stash
-
-	wip = commit --message="WIP"
-
-	cina = commit --no-edit --amend
-	curr = branch --show-current
-	last = log --max-count 1 --pretty=fuller
-	root = rev-parse --show-toplevel
-	spop = !"git stash pop && git stash list && :"
-
-	aliases = config --get-regexp '^alias\\.'
-	unstage = restore --staged
-
 [include]
-	path = ~/.config/git/url.gitconfig
-	path = ~/.config/git/local.gitconfig
+	path = ~/.config/git/config-alias.gitconfig
+	path = ~/.config/git/config-url.gitconfig
 
 # gitbare-related config
 [includeIf "gitdir:~/.local/share/dotfiles/bare.git"]
@@ -97,3 +65,7 @@
 # yadm-related config
 [includeIf "gitdir:~/.local/share/yadm/repo.git"]
 	path = ~/.config/git/dotfiles-gitbare.gitconfig
+
+# local config
+[include]
+	path = ~/.config/git/local.gitconfig
