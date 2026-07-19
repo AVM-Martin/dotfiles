@@ -7,6 +7,9 @@
 	addEmptyPathspec = false
 	skippedCherryPicks = false
 
+[branch]
+	sort = -committerdate
+
 [color]
 	ui = auto
 
@@ -19,6 +22,9 @@
 	autocrlf = false
 	excludesFile = ~/.config/git/ignore
 	attributesFile = ~/.config/git/attributes
+
+[diff]
+	algorithm = histogram
 
 [fetch]
 	prune = true

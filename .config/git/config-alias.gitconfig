@@ -24,6 +24,7 @@
 	wip = commit --message="WIP"
 
 	cina = commit --no-edit --amend
+	cino = commit --no-edit --amend --date=now
 	curr = branch --show-current
 	last = log --max-count 1 --pretty=fuller
 	root = rev-parse --show-toplevel
