@@ -14,10 +14,10 @@ indent_style = tab
 indent_size = 4
 
 # bash script
-[*.sh]
+[*.{sh,bash,zsh}]
 indent_style = space
 indent_size = 2
 
 # diffs and patches
-[{*.diff,*.patch}]
+[*.{diff,patch}]
 trim_trailing_whitespace = false
