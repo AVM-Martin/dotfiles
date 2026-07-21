@@ -17,4 +17,4 @@ mkdir -p "${HOME}/bin"
 ln -sf "${YADM_BIN_PATH}" "${HOME}/bin/yadm"
 
 # call generic dotfiles bootstrapper
-"${HOME}/.config/dotfiles/bootstrap"
+"${HOME}/.config/dotfiles/bootstrap.bash"

@@ -18,6 +18,6 @@
 
 - shell:
     - description: Run bootstrap scripts
-      command: "$HOME/.config/dotfiles/bootstrap"
+      command: "$HOME/.config/dotfiles/bootstrap.bash"
       stdout: true
       stderr: true

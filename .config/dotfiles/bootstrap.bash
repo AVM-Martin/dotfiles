@@ -6,7 +6,7 @@
 # shellcheck disable=SC1091
 source "${HOME}/.config/shell/env.bash"
 
-BOOTSTRAP_D="${BASH_SOURCE[0]}.d"
+readonly BOOTSTRAP_D="${HOME}/.config/dotfiles/bootstrap.d"
 
 if [[ ! -d "${BOOTSTRAP_D}" ]]; then
   echo "Error: bootstrap directory '${BOOTSTRAP_D}' not found" >&2

@@ -7,4 +7,5 @@ if ! type -p "brew" > "/dev/null" 2>&1; then
   exit 0
 fi
 
-brew bundle --quiet --no-upgrade --file "$(dirname "${BASH_SOURCE[0]}")/Brewfile"
+# install complete list
+brew bundle --quiet --no-upgrade --file "${HOME}/.config/dotfiles/bootstrap.d/Brewfile"
