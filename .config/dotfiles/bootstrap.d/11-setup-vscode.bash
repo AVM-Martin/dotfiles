@@ -19,3 +19,10 @@ if [[ "$(uname -s || true)" == "Darwin" ]]; then
     ln -sf "${linked}" "${CONFIG_MACOS_HOME}/User/"
   done
 fi
+
+# install vscode extensions (exclude empty lines and '#'-prefixed comments)
+# shellcheck disable=SC2312
+grep -v '^#\|^$' "${HOME}/.config/Code/extensions.list" | while IFS= read -r ext; do
+  code --install-extension "${ext}" \
+    | (grep --color=never "Extension '${ext%\@*}' v[^ ]\+ was successfully installed." || true)
+done

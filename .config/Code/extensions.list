@@ -1,0 +1,25 @@
+# utility
+editorconfig.editorconfig@0.18.2
+ms-vscode.wordcount@0.1.0
+tomoki1207.pdf@1.2.2
+tyriar.sort-lines@1.12.0
+
+# syntax highlighter
+andyyaldoo.vscode-json@1.5.2
+mechatroner.rainbow-csv@3.24.1
+samuelcolvin.jinjahtml@0.20.0
+tamasfe.even-better-toml@0.21.2
+
+# github markdown support
+bierner.markdown-checkbox@0.4.0
+bierner.markdown-emoji@0.3.1
+bierner.markdown-footnotes@0.1.1
+bierner.markdown-preview-github-styles@2.2.0
+
+# language-specific
+docker.docker@0.18.0
+github.vscode-github-actions@0.32.3
+golang.go@0.54.0
+ms-python.vscode-pylance@2026.3.1
+opentofu.vscode-opentofu@0.6.3
+timonwong.shellcheck@0.39.5
