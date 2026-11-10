@@ -5,4 +5,5 @@
 	showUntrackedFiles = no
 
 [alias]
+	compare = !"avm dotfiles-compare" # see .local/script/avm-dotfiles-compare
 	ls-ignored = ls-files -o -i -x 'local.*'

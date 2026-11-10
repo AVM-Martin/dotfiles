@@ -1,0 +1,66 @@
+#!/bin/bash -eu
+#
+# Check listed apps/extensions on bootstrap files against the actual state.
+
+NAME="$(basename "$0")"
+PREFIX="\033[1;96m${NAME}\033[0m"
+readonly NAME PREFIX
+
+readonly awk_nf=' |,|"'
+readonly grep_v='^#\|^$'
+
+function batdiff() {
+  if ! type -p "bat" > "/dev/null" 2>&1; then
+    echo -e "${PREFIX}: command 'bat' is not found, skipped"
+    return 0
+  fi
+
+  # shellcheck disable=SC2312
+  diff --color=always <(sort < "${2}") <(sort < "${3}") \
+    | grep -e "\(>\|<\) " \
+    | bat --language diff --paging never --file-name "${1}"
+}
+
+
+readonly homebrewfile="${HOME}/.config/dotfiles/bootstrap.d/Brewfile"
+readonly vscodefile="${HOME}/.config/Code/extensions.list"
+
+# brew installation
+function check_brew() {
+  if ! type -p "brew" > "/dev/null" 2>&1; then
+    echo -e "${PREFIX}: command 'brew' is not found, skipped"
+    return 0
+  fi
+
+  # shellcheck disable=SC2312
+  batdiff "Brewfile vs actual installation (brew)" \
+    <(awk -F "${awk_nf}" '{if ($1 == "brew") { print $3 } }' "${homebrewfile}") \
+    <(brew list --installed-on-request)
+
+  # shellcheck disable=SC2312
+  batdiff "Brewfile vs actual installation (cask)" \
+    <(awk -F "${awk_nf}" '{if ($1 == "cask") { print $3 } }' "${homebrewfile}") \
+    <(brew list --cask -1)
+
+  # shellcheck disable=SC2312
+  batdiff "Brewfile vs actual installation (mas)" \
+    <(awk -F "${awk_nf}" '{if ($1 == "mas") { print $7, $3 } }' "${homebrewfile}") \
+    <(mas list | awk '{ print $1, $2 }')
+}
+
+# vscode extension
+function check_vscode_extension() {
+  if ! type -p "code" > "/dev/null" 2>&1; then
+    echo -e "${PREFIX}: command 'code' is not found, skipped"
+    return 0
+  fi
+
+  # shellcheck disable=SC2312
+  batdiff "vscode extensions.list vs actual installation" \
+    <(grep -v "${grep_v}" "${vscodefile}") \
+    <(code --list-extensions --show-versions)
+}
+
+
+check_brew
+check_vscode_extension
