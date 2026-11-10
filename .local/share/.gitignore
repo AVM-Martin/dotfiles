@@ -1,3 +1,7 @@
+# dotfiles-related
+/dotfiles/bare.git/
+/yadm/repo.git/
+
 # ignore all
 /cargo/
 /nvm/

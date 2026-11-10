@@ -1,6 +1,2 @@
-# dotfiles-related
-/share/dotfiles/bare.git/
-/share/yadm/repo.git/
-
 # ignore gpg home
 /share/gnupg/
